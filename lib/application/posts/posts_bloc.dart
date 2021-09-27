@@ -1,13 +1,13 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart' hide IList;
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter_dev_showcase/domain/posts/i_post_repository.dart';
 import 'package:flutter_dev_showcase/domain/posts/post_failure.dart';
+import 'package:flutter_dev_showcase/domain/posts/posts_objects.dart';
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:rxdart/rxdart.dart';
 
 part 'posts_event.dart';
 part 'posts_state.dart';
@@ -15,18 +15,47 @@ part 'posts_bloc.freezed.dart';
 
 @injectable
 class PostsBloc extends Bloc<PostsEvent, PostsState> {
-  PostsBloc(this.postRepo) : super(_Initial());
   final IPostRepository postRepo;
+  PostsBloc(this.postRepo) : super(PostsState.initial()) {
+    on<PostsEvent>(
+      (events, emit) async {
+        await events.map(
+          started: (e) async {
+            emit(state.copyWith(isLoading: true));
+            await Future.delayed(Duration(seconds: 4));
+            var response = await postRepo.getPostData();
+            IList<PostItem> items = <PostItem>[].lock;
+            Either<PostFailure, PostsSearch> either =
+                response.match((l) => left(l), (r) {
+              items = items.addAll(r);
+              return right(PostsSearch(itemsToSearch: r));
+            });
+            emit(state.copyWith(
+                isLoading: false,
+                item: items,
+                optionFailureOrSuccess: optionOf(either)));
+          },
+          comments: (e) async {},
+          search: (e) async {
+            Either<PostFailure, PostsSearch> right =
+                Either<PostFailure, PostsSearch>.of(
+                    PostsSearch(itemsToSearch: state.item, keyword: e.keyword));
+            emit(state.copyWith(optionFailureOrSuccess: optionOf(right)));
+          },
+        );
+      },
+      transformer: debounce(),
+    );
+  }
 
-  @override
-  Stream<PostsState> mapEventToState(
-    PostsEvent event,
-  ) async* {
-    yield* event.map(started: (_) async* {
-      yield PostsState.loading();
-      await Future.delayed(Duration(seconds: 4));
-      var response = await postRepo.getPostData();
-      yield PostsState.loaded(optionFailureOrSuccess: optionOf(response));
-    });
+  EventTransformer<PostsEvent> debounce<PostsEvent>() {
+    return (events, mapper) {
+      final Stream<PostsEvent> nonbounceStream =
+          events.where((event) => event is! _Search);
+      final Stream<PostsEvent> debounceStream = events
+          .where((event) => event is _Search)
+          .debounceTime(const Duration(milliseconds: 300));
+      return MergeStream([nonbounceStream, debounceStream]).flatMap(mapper);
+    };
   }
 }

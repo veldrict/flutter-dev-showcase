@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'post_failure.dart';
 
@@ -42,6 +43,13 @@ mixin _$PostFailure {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noData,
+    TResult Function()? noInternet,
+    TResult Function()? failed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noData,
     TResult Function()? noInternet,
@@ -54,6 +62,13 @@ mixin _$PostFailure {
     required TResult Function(_NoData value) noData,
     required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Failed value) failed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoData value)? noData,
+    TResult Function(_NoInternet value)? noInternet,
+    TResult Function(_Failed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -128,6 +143,16 @@ class _$_NoData implements _NoData {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noData,
+    TResult Function()? noInternet,
+    TResult Function()? failed,
+  }) {
+    return noData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noData,
     TResult Function()? noInternet,
@@ -148,6 +173,16 @@ class _$_NoData implements _NoData {
     required TResult Function(_Failed value) failed,
   }) {
     return noData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoData value)? noData,
+    TResult Function(_NoInternet value)? noInternet,
+    TResult Function(_Failed value)? failed,
+  }) {
+    return noData?.call(this);
   }
 
   @override
@@ -217,6 +252,16 @@ class _$_NoInternet implements _NoInternet {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noData,
+    TResult Function()? noInternet,
+    TResult Function()? failed,
+  }) {
+    return noInternet?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noData,
     TResult Function()? noInternet,
@@ -237,6 +282,16 @@ class _$_NoInternet implements _NoInternet {
     required TResult Function(_Failed value) failed,
   }) {
     return noInternet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoData value)? noData,
+    TResult Function(_NoInternet value)? noInternet,
+    TResult Function(_Failed value)? failed,
+  }) {
+    return noInternet?.call(this);
   }
 
   @override
@@ -304,6 +359,16 @@ class _$_Failed implements _Failed {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? noData,
+    TResult Function()? noInternet,
+    TResult Function()? failed,
+  }) {
+    return failed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noData,
     TResult Function()? noInternet,
@@ -324,6 +389,16 @@ class _$_Failed implements _Failed {
     required TResult Function(_Failed value) failed,
   }) {
     return failed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NoData value)? noData,
+    TResult Function(_NoInternet value)? noInternet,
+    TResult Function(_Failed value)? failed,
+  }) {
+    return failed?.call(this);
   }
 
   @override

@@ -13,12 +13,12 @@ class Routers {
 
   final List<GetPage> routers = [
     GetPage(
-      name: Routers.posts,
-      page: () => BlocProvider<PostsBloc>(
-        create: (context) => getIt<PostsBloc>()..add(PostsEvent.started()),
-        child: PostPage(),
-      ),
-    ),
+        name: Routers.posts,
+        page: () => MultiBlocProvider(providers: [
+              BlocProvider<PostsBloc>(
+                  create: (context) =>
+                      getIt<PostsBloc>()..add(PostsEvent.started())),
+            ], child: PostPage())),
     GetPage(
       name: Routers.comments,
       page: () => BlocProvider<CommentsBloc>(

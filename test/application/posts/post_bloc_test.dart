@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:dartz/dartz.dart' hide IList;
+import 'package:fpdart/fpdart.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
 import 'package:flutter_dev_showcase/domain/posts/i_post_repository.dart';

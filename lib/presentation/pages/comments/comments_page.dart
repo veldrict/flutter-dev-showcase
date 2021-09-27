@@ -121,10 +121,7 @@ class CommentsPage extends HookWidget {
                             },
                             itemCount: 10),
                         loaded: (s) {
-                          return s.optionFailedOrSuccess.fold(
-                            () => Center(
-                              child: Text("No Data"),
-                            ),
+                          return s.optionFailedOrSuccess.match(
                             (options) => options.fold(
                               (l) => Center(
                                 child: Text("No Data"),
@@ -169,6 +166,9 @@ class CommentsPage extends HookWidget {
                                   );
                                 },
                               ),
+                            ),
+                            () => Center(
+                              child: Text("No Data"),
                             ),
                           );
                         },

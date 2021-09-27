@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'posts_bloc.dart';
 
@@ -19,6 +20,18 @@ class _$PostsEventTearOff {
   _Started started() {
     return const _Started();
   }
+
+  _Comments comments({required String comment}) {
+    return _Comments(
+      comment: comment,
+    );
+  }
+
+  _Search search({required String keyword}) {
+    return _Search(
+      keyword: keyword,
+    );
+  }
 }
 
 /// @nodoc
@@ -29,22 +42,44 @@ mixin _$PostsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function(String comment) comments,
+    required TResult Function(String keyword) search,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_Comments value) comments,
+    required TResult Function(_Search value) search,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -104,14 +139,28 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function(String comment) comments,
+    required TResult Function(String keyword) search,
   }) {
     return started();
   }
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
+  }) {
+    return started?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -124,14 +173,28 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_Comments value) comments,
+    required TResult Function(_Search value) search,
   }) {
     return started(this);
   }
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
+  }) {
+    return started?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -146,21 +209,290 @@ abstract class _Started implements PostsEvent {
 }
 
 /// @nodoc
+abstract class _$CommentsCopyWith<$Res> {
+  factory _$CommentsCopyWith(_Comments value, $Res Function(_Comments) then) =
+      __$CommentsCopyWithImpl<$Res>;
+  $Res call({String comment});
+}
+
+/// @nodoc
+class __$CommentsCopyWithImpl<$Res> extends _$PostsEventCopyWithImpl<$Res>
+    implements _$CommentsCopyWith<$Res> {
+  __$CommentsCopyWithImpl(_Comments _value, $Res Function(_Comments) _then)
+      : super(_value, (v) => _then(v as _Comments));
+
+  @override
+  _Comments get _value => super._value as _Comments;
+
+  @override
+  $Res call({
+    Object? comment = freezed,
+  }) {
+    return _then(_Comments(
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Comments implements _Comments {
+  const _$_Comments({required this.comment});
+
+  @override
+  final String comment;
+
+  @override
+  String toString() {
+    return 'PostsEvent.comments(comment: $comment)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Comments &&
+            (identical(other.comment, comment) ||
+                const DeepCollectionEquality().equals(other.comment, comment)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(comment);
+
+  @JsonKey(ignore: true)
+  @override
+  _$CommentsCopyWith<_Comments> get copyWith =>
+      __$CommentsCopyWithImpl<_Comments>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String comment) comments,
+    required TResult Function(String keyword) search,
+  }) {
+    return comments(comment);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
+  }) {
+    return comments?.call(comment);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
+    required TResult orElse(),
+  }) {
+    if (comments != null) {
+      return comments(comment);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Comments value) comments,
+    required TResult Function(_Search value) search,
+  }) {
+    return comments(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
+  }) {
+    return comments?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
+    required TResult orElse(),
+  }) {
+    if (comments != null) {
+      return comments(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Comments implements PostsEvent {
+  const factory _Comments({required String comment}) = _$_Comments;
+
+  String get comment => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$CommentsCopyWith<_Comments> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$SearchCopyWith<$Res> {
+  factory _$SearchCopyWith(_Search value, $Res Function(_Search) then) =
+      __$SearchCopyWithImpl<$Res>;
+  $Res call({String keyword});
+}
+
+/// @nodoc
+class __$SearchCopyWithImpl<$Res> extends _$PostsEventCopyWithImpl<$Res>
+    implements _$SearchCopyWith<$Res> {
+  __$SearchCopyWithImpl(_Search _value, $Res Function(_Search) _then)
+      : super(_value, (v) => _then(v as _Search));
+
+  @override
+  _Search get _value => super._value as _Search;
+
+  @override
+  $Res call({
+    Object? keyword = freezed,
+  }) {
+    return _then(_Search(
+      keyword: keyword == freezed
+          ? _value.keyword
+          : keyword // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Search implements _Search {
+  const _$_Search({required this.keyword});
+
+  @override
+  final String keyword;
+
+  @override
+  String toString() {
+    return 'PostsEvent.search(keyword: $keyword)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Search &&
+            (identical(other.keyword, keyword) ||
+                const DeepCollectionEquality().equals(other.keyword, keyword)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(keyword);
+
+  @JsonKey(ignore: true)
+  @override
+  _$SearchCopyWith<_Search> get copyWith =>
+      __$SearchCopyWithImpl<_Search>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String comment) comments,
+    required TResult Function(String keyword) search,
+  }) {
+    return search(keyword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
+  }) {
+    return search?.call(keyword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function(String keyword)? search,
+    required TResult orElse(),
+  }) {
+    if (search != null) {
+      return search(keyword);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Comments value) comments,
+    required TResult Function(_Search value) search,
+  }) {
+    return search(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
+  }) {
+    return search?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_Search value)? search,
+    required TResult orElse(),
+  }) {
+    if (search != null) {
+      return search(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Search implements PostsEvent {
+  const factory _Search({required String keyword}) = _$_Search;
+
+  String get keyword => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$SearchCopyWith<_Search> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 class _$PostsStateTearOff {
   const _$PostsStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
-  }
-
-  _Loading loading() {
-    return const _Loading();
-  }
-
-  _Loaded loaded(
-      {required Option<Either<PostFailure, IList<PostItem>>>
+  _PostsState call(
+      {required bool isLoading,
+      required IList<PostItem> item,
+      required Option<Either<PostFailure, PostsSearch>>
           optionFailureOrSuccess}) {
-    return _Loaded(
+    return _PostsState(
+      isLoading: isLoading,
+      item: item,
       optionFailureOrSuccess: optionFailureOrSuccess,
     );
   }
@@ -171,40 +503,13 @@ const $PostsState = _$PostsStateTearOff();
 
 /// @nodoc
 mixin _$PostsState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>> optionFailureOrSuccess)
-        loaded,
-  }) =>
+  bool get isLoading => throw _privateConstructorUsedError;
+  IList<PostItem> get item => throw _privateConstructorUsedError;
+  Option<Either<PostFailure, PostsSearch>> get optionFailureOrSuccess =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>>
-                optionFailureOrSuccess)?
-        loaded,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    required TResult orElse(),
-  }) =>
+
+  @JsonKey(ignore: true)
+  $PostsStateCopyWith<PostsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -213,6 +518,10 @@ abstract class $PostsStateCopyWith<$Res> {
   factory $PostsStateCopyWith(
           PostsState value, $Res Function(PostsState) then) =
       _$PostsStateCopyWithImpl<$Res>;
+  $Res call(
+      {bool isLoading,
+      IList<PostItem> item,
+      Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess});
 }
 
 /// @nodoc
@@ -222,239 +531,104 @@ class _$PostsStateCopyWithImpl<$Res> implements $PostsStateCopyWith<$Res> {
   final PostsState _value;
   // ignore: unused_field
   final $Res Function(PostsState) _then;
-}
-
-/// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
-
-  @override
-  _Initial get _value => super._value as _Initial;
-}
-
-/// @nodoc
-
-class _$_Initial implements _Initial {
-  const _$_Initial();
-
-  @override
-  String toString() {
-    return 'PostsState.initial()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Initial);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>> optionFailureOrSuccess)
-        loaded,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>>
-                optionFailureOrSuccess)?
-        loaded,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements PostsState {
-  const factory _Initial() = _$_Initial;
-}
-
-/// @nodoc
-abstract class _$LoadingCopyWith<$Res> {
-  factory _$LoadingCopyWith(_Loading value, $Res Function(_Loading) then) =
-      __$LoadingCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$LoadingCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
-    implements _$LoadingCopyWith<$Res> {
-  __$LoadingCopyWithImpl(_Loading _value, $Res Function(_Loading) _then)
-      : super(_value, (v) => _then(v as _Loading));
-
-  @override
-  _Loading get _value => super._value as _Loading;
-}
-
-/// @nodoc
-
-class _$_Loading implements _Loading {
-  const _$_Loading();
-
-  @override
-  String toString() {
-    return 'PostsState.loading()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Loading);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>> optionFailureOrSuccess)
-        loaded,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>>
-                optionFailureOrSuccess)?
-        loaded,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Loading implements PostsState {
-  const factory _Loading() = _$_Loading;
-}
-
-/// @nodoc
-abstract class _$LoadedCopyWith<$Res> {
-  factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
-      __$LoadedCopyWithImpl<$Res>;
-  $Res call(
-      {Option<Either<PostFailure, IList<PostItem>>> optionFailureOrSuccess});
-}
-
-/// @nodoc
-class __$LoadedCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
-    implements _$LoadedCopyWith<$Res> {
-  __$LoadedCopyWithImpl(_Loaded _value, $Res Function(_Loaded) _then)
-      : super(_value, (v) => _then(v as _Loaded));
-
-  @override
-  _Loaded get _value => super._value as _Loaded;
 
   @override
   $Res call({
+    Object? isLoading = freezed,
+    Object? item = freezed,
     Object? optionFailureOrSuccess = freezed,
   }) {
-    return _then(_Loaded(
+    return _then(_value.copyWith(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as IList<PostItem>,
       optionFailureOrSuccess: optionFailureOrSuccess == freezed
           ? _value.optionFailureOrSuccess
           : optionFailureOrSuccess // ignore: cast_nullable_to_non_nullable
-              as Option<Either<PostFailure, IList<PostItem>>>,
+              as Option<Either<PostFailure, PostsSearch>>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$PostsStateCopyWith<$Res> implements $PostsStateCopyWith<$Res> {
+  factory _$PostsStateCopyWith(
+          _PostsState value, $Res Function(_PostsState) then) =
+      __$PostsStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {bool isLoading,
+      IList<PostItem> item,
+      Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess});
+}
+
+/// @nodoc
+class __$PostsStateCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
+    implements _$PostsStateCopyWith<$Res> {
+  __$PostsStateCopyWithImpl(
+      _PostsState _value, $Res Function(_PostsState) _then)
+      : super(_value, (v) => _then(v as _PostsState));
+
+  @override
+  _PostsState get _value => super._value as _PostsState;
+
+  @override
+  $Res call({
+    Object? isLoading = freezed,
+    Object? item = freezed,
+    Object? optionFailureOrSuccess = freezed,
+  }) {
+    return _then(_PostsState(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as IList<PostItem>,
+      optionFailureOrSuccess: optionFailureOrSuccess == freezed
+          ? _value.optionFailureOrSuccess
+          : optionFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Option<Either<PostFailure, PostsSearch>>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_Loaded implements _Loaded {
-  const _$_Loaded({required this.optionFailureOrSuccess});
+class _$_PostsState implements _PostsState {
+  const _$_PostsState(
+      {required this.isLoading,
+      required this.item,
+      required this.optionFailureOrSuccess});
 
   @override
-  final Option<Either<PostFailure, IList<PostItem>>> optionFailureOrSuccess;
+  final bool isLoading;
+  @override
+  final IList<PostItem> item;
+  @override
+  final Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess;
 
   @override
   String toString() {
-    return 'PostsState.loaded(optionFailureOrSuccess: $optionFailureOrSuccess)';
+    return 'PostsState(isLoading: $isLoading, item: $item, optionFailureOrSuccess: $optionFailureOrSuccess)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Loaded &&
+        (other is _PostsState &&
+            (identical(other.isLoading, isLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLoading, isLoading)) &&
+            (identical(other.item, item) ||
+                const DeepCollectionEquality().equals(other.item, item)) &&
             (identical(other.optionFailureOrSuccess, optionFailureOrSuccess) ||
                 const DeepCollectionEquality().equals(
                     other.optionFailureOrSuccess, optionFailureOrSuccess)));
@@ -463,74 +637,32 @@ class _$_Loaded implements _Loaded {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isLoading) ^
+      const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(optionFailureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
-  _$LoadedCopyWith<_Loaded> get copyWith =>
-      __$LoadedCopyWithImpl<_Loaded>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>> optionFailureOrSuccess)
-        loaded,
-  }) {
-    return loaded(optionFailureOrSuccess);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(
-            Option<Either<PostFailure, IList<PostItem>>>
-                optionFailureOrSuccess)?
-        loaded,
-    required TResult orElse(),
-  }) {
-    if (loaded != null) {
-      return loaded(optionFailureOrSuccess);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-  }) {
-    return loaded(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    required TResult orElse(),
-  }) {
-    if (loaded != null) {
-      return loaded(this);
-    }
-    return orElse();
-  }
+  _$PostsStateCopyWith<_PostsState> get copyWith =>
+      __$PostsStateCopyWithImpl<_PostsState>(this, _$identity);
 }
 
-abstract class _Loaded implements PostsState {
-  const factory _Loaded(
-      {required Option<Either<PostFailure, IList<PostItem>>>
-          optionFailureOrSuccess}) = _$_Loaded;
+abstract class _PostsState implements PostsState {
+  const factory _PostsState(
+      {required bool isLoading,
+      required IList<PostItem> item,
+      required Option<Either<PostFailure, PostsSearch>>
+          optionFailureOrSuccess}) = _$_PostsState;
 
-  Option<Either<PostFailure, IList<PostItem>>> get optionFailureOrSuccess =>
+  @override
+  bool get isLoading => throw _privateConstructorUsedError;
+  @override
+  IList<PostItem> get item => throw _privateConstructorUsedError;
+  @override
+  Option<Either<PostFailure, PostsSearch>> get optionFailureOrSuccess =>
       throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
-  _$LoadedCopyWith<_Loaded> get copyWith => throw _privateConstructorUsedError;
+  _$PostsStateCopyWith<_PostsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:connectivity/connectivity.dart';
 import 'package:dio/dio.dart';
-import 'package:dio/src/response.dart';
 import 'package:flutter_dev_showcase/domain/core/i_network_service.dart';
 import 'package:flutter_dev_showcase/domain/core/no_internet_exception.dart';
 import 'package:flutter_dev_showcase/domain/core/server_exception.dart';
