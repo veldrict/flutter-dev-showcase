@@ -3,7 +3,6 @@ import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import './errors.dart';
 import './failures.dart';
-import 'package:uuid/uuid.dart';
 
 @immutable
 abstract class ValueObject<T> {
@@ -20,7 +19,7 @@ abstract class ValueObject<T> {
     return value.fold((f) => null, id);
   }
 
-  Either<ValueFailure<dynamic>, Unit> get failureOrUnit {
+  Either<ValueFailure<T>, Unit> get failureOrUnit {
     return value.fold(
       (l) => left(l),
       (r) => right(unit),
@@ -41,16 +40,4 @@ abstract class ValueObject<T> {
 
   @override
   String toString() => 'Value($value)';
-}
-
-class UniqueId extends ValueObject<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
-
-  factory UniqueId() {
-    return UniqueId._(
-      right(Uuid().v1()),
-    );
-  }
-  const UniqueId._(this.value);
 }

@@ -27,6 +27,10 @@ class _$PostsEventTearOff {
     );
   }
 
+  _NextPage nextPage() {
+    return const _NextPage();
+  }
+
   _Search search({required String keyword}) {
     return _Search(
       keyword: keyword,
@@ -43,6 +47,7 @@ mixin _$PostsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String comment) comments,
+    required TResult Function() nextPage,
     required TResult Function(String keyword) search,
   }) =>
       throw _privateConstructorUsedError;
@@ -50,6 +55,7 @@ mixin _$PostsEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
   }) =>
       throw _privateConstructorUsedError;
@@ -57,6 +63,7 @@ mixin _$PostsEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
     required TResult orElse(),
   }) =>
@@ -65,6 +72,7 @@ mixin _$PostsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Comments value) comments,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_Search value) search,
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +80,7 @@ mixin _$PostsEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
   }) =>
       throw _privateConstructorUsedError;
@@ -79,6 +88,7 @@ mixin _$PostsEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
     required TResult orElse(),
   }) =>
@@ -140,6 +150,7 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String comment) comments,
+    required TResult Function() nextPage,
     required TResult Function(String keyword) search,
   }) {
     return started();
@@ -150,6 +161,7 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
   }) {
     return started?.call();
@@ -160,6 +172,7 @@ class _$_Started implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
     required TResult orElse(),
   }) {
@@ -174,6 +187,7 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Comments value) comments,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_Search value) search,
   }) {
     return started(this);
@@ -184,6 +198,7 @@ class _$_Started implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
   }) {
     return started?.call(this);
@@ -194,6 +209,7 @@ class _$_Started implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
@@ -272,6 +288,7 @@ class _$_Comments implements _Comments {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String comment) comments,
+    required TResult Function() nextPage,
     required TResult Function(String keyword) search,
   }) {
     return comments(comment);
@@ -282,6 +299,7 @@ class _$_Comments implements _Comments {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
   }) {
     return comments?.call(comment);
@@ -292,6 +310,7 @@ class _$_Comments implements _Comments {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
     required TResult orElse(),
   }) {
@@ -306,6 +325,7 @@ class _$_Comments implements _Comments {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Comments value) comments,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_Search value) search,
   }) {
     return comments(this);
@@ -316,6 +336,7 @@ class _$_Comments implements _Comments {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
   }) {
     return comments?.call(this);
@@ -326,6 +347,7 @@ class _$_Comments implements _Comments {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
@@ -343,6 +365,119 @@ abstract class _Comments implements PostsEvent {
   @JsonKey(ignore: true)
   _$CommentsCopyWith<_Comments> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$NextPageCopyWith<$Res> {
+  factory _$NextPageCopyWith(_NextPage value, $Res Function(_NextPage) then) =
+      __$NextPageCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$NextPageCopyWithImpl<$Res> extends _$PostsEventCopyWithImpl<$Res>
+    implements _$NextPageCopyWith<$Res> {
+  __$NextPageCopyWithImpl(_NextPage _value, $Res Function(_NextPage) _then)
+      : super(_value, (v) => _then(v as _NextPage));
+
+  @override
+  _NextPage get _value => super._value as _NextPage;
+}
+
+/// @nodoc
+
+class _$_NextPage implements _NextPage {
+  const _$_NextPage();
+
+  @override
+  String toString() {
+    return 'PostsEvent.nextPage()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _NextPage);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String comment) comments,
+    required TResult Function() nextPage,
+    required TResult Function(String keyword) search,
+  }) {
+    return nextPage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
+    TResult Function(String keyword)? search,
+  }) {
+    return nextPage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
+    TResult Function(String keyword)? search,
+    required TResult orElse(),
+  }) {
+    if (nextPage != null) {
+      return nextPage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Comments value) comments,
+    required TResult Function(_NextPage value) nextPage,
+    required TResult Function(_Search value) search,
+  }) {
+    return nextPage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
+    TResult Function(_Search value)? search,
+  }) {
+    return nextPage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
+    TResult Function(_Search value)? search,
+    required TResult orElse(),
+  }) {
+    if (nextPage != null) {
+      return nextPage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NextPage implements PostsEvent {
+  const factory _NextPage() = _$_NextPage;
 }
 
 /// @nodoc
@@ -409,6 +544,7 @@ class _$_Search implements _Search {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String comment) comments,
+    required TResult Function() nextPage,
     required TResult Function(String keyword) search,
   }) {
     return search(keyword);
@@ -419,6 +555,7 @@ class _$_Search implements _Search {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
   }) {
     return search?.call(keyword);
@@ -429,6 +566,7 @@ class _$_Search implements _Search {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String comment)? comments,
+    TResult Function()? nextPage,
     TResult Function(String keyword)? search,
     required TResult orElse(),
   }) {
@@ -443,6 +581,7 @@ class _$_Search implements _Search {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Comments value) comments,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_Search value) search,
   }) {
     return search(this);
@@ -453,6 +592,7 @@ class _$_Search implements _Search {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
   }) {
     return search?.call(this);
@@ -463,6 +603,7 @@ class _$_Search implements _Search {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Comments value)? comments,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
@@ -487,11 +628,13 @@ class _$PostsStateTearOff {
 
   _PostsState call(
       {required bool isLoading,
+      required int index,
       required IList<PostItem> item,
       required Option<Either<PostFailure, PostsSearch>>
           optionFailureOrSuccess}) {
     return _PostsState(
       isLoading: isLoading,
+      index: index,
       item: item,
       optionFailureOrSuccess: optionFailureOrSuccess,
     );
@@ -504,6 +647,7 @@ const $PostsState = _$PostsStateTearOff();
 /// @nodoc
 mixin _$PostsState {
   bool get isLoading => throw _privateConstructorUsedError;
+  int get index => throw _privateConstructorUsedError;
   IList<PostItem> get item => throw _privateConstructorUsedError;
   Option<Either<PostFailure, PostsSearch>> get optionFailureOrSuccess =>
       throw _privateConstructorUsedError;
@@ -520,6 +664,7 @@ abstract class $PostsStateCopyWith<$Res> {
       _$PostsStateCopyWithImpl<$Res>;
   $Res call(
       {bool isLoading,
+      int index,
       IList<PostItem> item,
       Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess});
 }
@@ -535,6 +680,7 @@ class _$PostsStateCopyWithImpl<$Res> implements $PostsStateCopyWith<$Res> {
   @override
   $Res call({
     Object? isLoading = freezed,
+    Object? index = freezed,
     Object? item = freezed,
     Object? optionFailureOrSuccess = freezed,
   }) {
@@ -543,6 +689,10 @@ class _$PostsStateCopyWithImpl<$Res> implements $PostsStateCopyWith<$Res> {
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      index: index == freezed
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -563,6 +713,7 @@ abstract class _$PostsStateCopyWith<$Res> implements $PostsStateCopyWith<$Res> {
   @override
   $Res call(
       {bool isLoading,
+      int index,
       IList<PostItem> item,
       Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess});
 }
@@ -580,6 +731,7 @@ class __$PostsStateCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isLoading = freezed,
+    Object? index = freezed,
     Object? item = freezed,
     Object? optionFailureOrSuccess = freezed,
   }) {
@@ -588,6 +740,10 @@ class __$PostsStateCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      index: index == freezed
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -605,11 +761,14 @@ class __$PostsStateCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
 class _$_PostsState implements _PostsState {
   const _$_PostsState(
       {required this.isLoading,
+      required this.index,
       required this.item,
       required this.optionFailureOrSuccess});
 
   @override
   final bool isLoading;
+  @override
+  final int index;
   @override
   final IList<PostItem> item;
   @override
@@ -617,7 +776,7 @@ class _$_PostsState implements _PostsState {
 
   @override
   String toString() {
-    return 'PostsState(isLoading: $isLoading, item: $item, optionFailureOrSuccess: $optionFailureOrSuccess)';
+    return 'PostsState(isLoading: $isLoading, index: $index, item: $item, optionFailureOrSuccess: $optionFailureOrSuccess)';
   }
 
   @override
@@ -627,6 +786,8 @@ class _$_PostsState implements _PostsState {
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
                     .equals(other.isLoading, isLoading)) &&
+            (identical(other.index, index) ||
+                const DeepCollectionEquality().equals(other.index, index)) &&
             (identical(other.item, item) ||
                 const DeepCollectionEquality().equals(other.item, item)) &&
             (identical(other.optionFailureOrSuccess, optionFailureOrSuccess) ||
@@ -638,6 +799,7 @@ class _$_PostsState implements _PostsState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isLoading) ^
+      const DeepCollectionEquality().hash(index) ^
       const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(optionFailureOrSuccess);
 
@@ -650,12 +812,15 @@ class _$_PostsState implements _PostsState {
 abstract class _PostsState implements PostsState {
   const factory _PostsState(
       {required bool isLoading,
+      required int index,
       required IList<PostItem> item,
       required Option<Either<PostFailure, PostsSearch>>
           optionFailureOrSuccess}) = _$_PostsState;
 
   @override
   bool get isLoading => throw _privateConstructorUsedError;
+  @override
+  int get index => throw _privateConstructorUsedError;
   @override
   IList<PostItem> get item => throw _privateConstructorUsedError;
   @override

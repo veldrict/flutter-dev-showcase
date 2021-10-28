@@ -148,12 +148,13 @@ class __$PostItemCopyWithImpl<$Res> extends _$PostItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PostItem implements _PostItem {
-  const _$_PostItem(
+class _$_PostItem extends _PostItem {
+  _$_PostItem(
       {required this.userId,
       @JsonKey(name: 'id') required this.ids,
       required this.title,
-      required this.body});
+      required this.body})
+      : super._();
 
   factory _$_PostItem.fromJson(Map<String, dynamic> json) =>
       _$$_PostItemFromJson(json);
@@ -206,12 +207,13 @@ class _$_PostItem implements _PostItem {
   }
 }
 
-abstract class _PostItem implements PostItem {
-  const factory _PostItem(
+abstract class _PostItem extends PostItem {
+  factory _PostItem(
       {required int userId,
       @JsonKey(name: 'id') required int ids,
       required String title,
       required String body}) = _$_PostItem;
+  _PostItem._() : super._();
 
   factory _PostItem.fromJson(Map<String, dynamic> json) = _$_PostItem.fromJson;
 

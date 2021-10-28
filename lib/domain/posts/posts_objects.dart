@@ -1,6 +1,7 @@
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter_dev_showcase/domain/core/failures.dart';
 import 'package:flutter_dev_showcase/domain/core/value_objects.dart';
+
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
 import 'package:fpdart/fpdart.dart';
 

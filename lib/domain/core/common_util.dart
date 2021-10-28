@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:fpdart/fpdart.dart';
 
 import 'package:intl/intl.dart';

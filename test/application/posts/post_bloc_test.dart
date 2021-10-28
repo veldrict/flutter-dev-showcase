@@ -1,4 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
+import 'package:flutter_dev_showcase/domain/posts/posts_objects.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
@@ -14,6 +15,7 @@ void main() {
   late MockPostRepo postRepo;
   late PostsBloc postBloc;
   late IList<PostItem> _listItem;
+  late PostsState _state;
 
   setUp(() {
     postRepo = MockPostRepo();
@@ -22,6 +24,7 @@ void main() {
       PostItem(userId: 1, ids: 1, title: 'test title1', body: 'test body 1'),
       PostItem(userId: 1, ids: 2, title: 'test title2', body: 'test body 2'),
     ].toIList();
+    _state = PostsState.initial();
   });
 
   tearDownAll(() {
@@ -37,10 +40,17 @@ void main() {
       return postBloc;
     },
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
+    wait: Duration(seconds: 4),
     expect: () => [
-      PostsState.loading(),
-      PostsState.loaded(
-          optionFailureOrSuccess: optionOf(left(PostFailure.failed())))
+      _state.copyWith(isLoading: true),
+      _state.copyWith(
+        isLoading: false,
+        optionFailureOrSuccess: optionOf(
+          left(
+            PostFailure.failed(),
+          ),
+        ),
+      ),
     ],
   );
 
@@ -52,10 +62,17 @@ void main() {
       return postBloc;
     },
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
+    wait: Duration(seconds: 4),
     expect: () => [
-      PostsState.loading(),
-      PostsState.loaded(
-          optionFailureOrSuccess: optionOf(left(PostFailure.noInternet())))
+      _state.copyWith(isLoading: true),
+      _state.copyWith(
+        isLoading: false,
+        optionFailureOrSuccess: optionOf(
+          left(
+            PostFailure.noInternet(),
+          ),
+        ),
+      ),
     ],
   );
   blocTest(
@@ -66,10 +83,17 @@ void main() {
       return postBloc;
     },
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
+    wait: Duration(seconds: 4),
     expect: () => [
-      PostsState.loading(),
-      PostsState.loaded(
-          optionFailureOrSuccess: optionOf(left(PostFailure.noData())))
+      _state.copyWith(isLoading: true),
+      _state.copyWith(
+        isLoading: false,
+        optionFailureOrSuccess: optionOf(
+          left(
+            PostFailure.noData(),
+          ),
+        ),
+      ),
     ],
   );
 
@@ -81,9 +105,18 @@ void main() {
       return postBloc;
     },
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
+    wait: Duration(seconds: 4),
     expect: () => [
-      PostsState.loading(),
-      PostsState.loaded(optionFailureOrSuccess: optionOf(right(_listItem)))
+      _state.copyWith(isLoading: true),
+      _state.copyWith(
+        isLoading: false,
+        item: _listItem,
+        optionFailureOrSuccess: optionOf(
+          right(
+            PostsSearch(itemsToSearch: _listItem),
+          ),
+        ),
+      ),
     ],
   );
 }

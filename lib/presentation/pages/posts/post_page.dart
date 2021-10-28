@@ -57,7 +57,7 @@ class PostPage extends HookWidget {
                               child: Text("No Data"),
                             ),
                         (search) => search.value.match(
-                              (l) => Center(
+                              (_) => Center(
                                 child: Text("Not Found"),
                               ),
                               (items) => ListView.builder(

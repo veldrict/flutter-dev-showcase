@@ -19,12 +19,27 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
   PostsBloc(this.postRepo) : super(PostsState.initial()) {
     on<PostsEvent>(
       (events, emit) async {
-        await events.map(
-          started: (e) async {
+        await events.when(
+          started: () async {
+            // state = state.copyWithinitial();
+            emit(PostsState.initial());
             emit(state.copyWith(isLoading: true));
-            await Future.delayed(Duration(seconds: 4));
             var response = await postRepo.getPostData();
-            IList<PostItem> items = <PostItem>[].lock;
+            IList<PostItem> items = state.item;
+            Either<PostFailure, PostsSearch> either =
+                response.match((l) => left(l), (r) {
+              items = r;
+              return right(PostsSearch(itemsToSearch: r));
+            });
+            emit(state.copyWith(
+                isLoading: false,
+                item: items,
+                optionFailureOrSuccess: optionOf(either)));
+          },
+          comments: (comment) {},
+          nextPage: () async {
+            var response = await postRepo.getPostData();
+            IList<PostItem> items = state.item;
             Either<PostFailure, PostsSearch> either =
                 response.match((l) => left(l), (r) {
               items = items.addAll(r);
@@ -35,11 +50,10 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
                 item: items,
                 optionFailureOrSuccess: optionOf(either)));
           },
-          comments: (e) async {},
-          search: (e) async {
+          search: (keyword) async {
             Either<PostFailure, PostsSearch> right =
                 Either<PostFailure, PostsSearch>.of(
-                    PostsSearch(itemsToSearch: state.item, keyword: e.keyword));
+                    PostsSearch(itemsToSearch: state.item, keyword: keyword));
             emit(state.copyWith(optionFailureOrSuccess: optionOf(right)));
           },
         );

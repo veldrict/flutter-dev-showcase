@@ -16,10 +16,12 @@ class CommentsBloc extends Bloc<CommentsEvent, CommentsState> {
   final ICommentRepository commentRepo;
   CommentsBloc(this.commentRepo) : super(_Initial()) {
     on<CommentsEvent>((event, emit) async {
-      await event.map(started: (e) async {
+      await event.when(started: (id) async {
         emit(CommentsState.loading());
-        var resp = await commentRepo.getComment(e.id);
-        emit(CommentsState.loaded(optionFailedOrSuccess: optionOf(resp)));
+        var resp = await commentRepo.getComment(id);
+        emit(
+          CommentsState.loaded(optionFailedOrSuccess: optionOf(resp)),
+        );
       });
     });
   }

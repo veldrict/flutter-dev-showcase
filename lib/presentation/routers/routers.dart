@@ -8,19 +8,20 @@ import 'package:flutter_dev_showcase/presentation/pages/posts/post_page.dart';
 import 'package:get/get.dart';
 
 class Routers {
-  static final String posts = '/';
+  static final String main = '/';
   static final String comments = '/comments';
+  static final String posts = '/comments/posts';
 
   final List<GetPage> routers = [
     GetPage(
-        name: Routers.posts,
-        page: () => MultiBlocProvider(providers: [
-              BlocProvider<PostsBloc>(
-                  create: (context) =>
-                      getIt<PostsBloc>()..add(PostsEvent.started())),
-            ], child: PostPage())),
+      name: Routers.main,
+      page: () => BlocProvider<PostsBloc>(
+        create: (context) => getIt<PostsBloc>()..add(PostsEvent.started()),
+        child: PostPage(),
+      ),
+    ),
     GetPage(
-      name: Routers.comments,
+      name: Routers.posts,
       page: () => BlocProvider<CommentsBloc>(
         create: (context) {
           PostItem item = Get.arguments as PostItem;

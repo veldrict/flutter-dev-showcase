@@ -5,7 +5,8 @@ part 'post_item.g.dart';
 
 @freezed
 class PostItem with _$PostItem {
-  const factory PostItem({
+  const PostItem._();
+  factory PostItem({
     required int userId,
     @JsonKey(name: 'id') required int ids,
     required String title,
