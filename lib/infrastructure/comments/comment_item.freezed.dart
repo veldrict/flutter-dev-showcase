@@ -36,7 +36,7 @@ class _$CommentItemTearOff {
     );
   }
 
-  CommentItem fromJson(Map<String, Object> json) {
+  CommentItem fromJson(Map<String, Object?> json) {
     return CommentItem.fromJson(json);
   }
 }
@@ -204,27 +204,17 @@ class _$_CommentItem implements _CommentItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommentItem &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.ids, ids) ||
-                const DeepCollectionEquality().equals(other.ids, ids)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.email, email) ||
-                const DeepCollectionEquality().equals(other.email, email)) &&
-            (identical(other.body, body) ||
-                const DeepCollectionEquality().equals(other.body, body)));
+        (other.runtimeType == runtimeType &&
+            other is _CommentItem &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.ids, ids) || other.ids == ids) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.body, body) || other.body == body));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(ids) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(body);
+  int get hashCode => Object.hash(runtimeType, postId, ids, name, email, body);
 
   @JsonKey(ignore: true)
   @override
@@ -249,16 +239,16 @@ abstract class _CommentItem implements CommentItem {
       _$_CommentItem.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
   @JsonKey(name: 'id')
-  int get ids => throw _privateConstructorUsedError;
+  int get ids;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get email => throw _privateConstructorUsedError;
+  String get email;
   @override
-  String get body => throw _privateConstructorUsedError;
+  String get body;
   @override
   @JsonKey(ignore: true)
   _$CommentItemCopyWith<_CommentItem> get copyWith =>

@@ -13,7 +13,7 @@ part 'posts_event.dart';
 part 'posts_state.dart';
 part 'posts_bloc.freezed.dart';
 
-@injectable
+@singleton
 class PostsBloc extends Bloc<PostsEvent, PostsState> {
   final IPostRepository postRepo;
   PostsBloc(this.postRepo) : super(PostsState.initial()) {
@@ -54,7 +54,12 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
             Either<PostFailure, PostsSearch> right =
                 Either<PostFailure, PostsSearch>.of(
                     PostsSearch(itemsToSearch: state.item, keyword: keyword));
-            emit(state.copyWith(optionFailureOrSuccess: optionOf(right)));
+            emit(
+              state.copyWith(
+                optionFailureOrSuccess: optionOf(right),
+                check: keyword,
+              ),
+            );
           },
         );
       },

@@ -125,7 +125,8 @@ class _$_NoData implements _NoData {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NoData);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _NoData);
   }
 
   @override
@@ -234,7 +235,8 @@ class _$_NoInternet implements _NoInternet {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NoInternet);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _NoInternet);
   }
 
   @override
@@ -341,7 +343,8 @@ class _$_Failed implements _Failed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Failed);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Failed);
   }
 
   @override

@@ -139,7 +139,8 @@ class _$_Started implements _Started {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Started);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Started);
   }
 
   @override
@@ -269,14 +270,13 @@ class _$_Comments implements _Comments {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Comments &&
-            (identical(other.comment, comment) ||
-                const DeepCollectionEquality().equals(other.comment, comment)));
+        (other.runtimeType == runtimeType &&
+            other is _Comments &&
+            (identical(other.comment, comment) || other.comment == comment));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(comment);
+  int get hashCode => Object.hash(runtimeType, comment);
 
   @JsonKey(ignore: true)
   @override
@@ -361,7 +361,7 @@ class _$_Comments implements _Comments {
 abstract class _Comments implements PostsEvent {
   const factory _Comments({required String comment}) = _$_Comments;
 
-  String get comment => throw _privateConstructorUsedError;
+  String get comment;
   @JsonKey(ignore: true)
   _$CommentsCopyWith<_Comments> get copyWith =>
       throw _privateConstructorUsedError;
@@ -395,7 +395,8 @@ class _$_NextPage implements _NextPage {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NextPage);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _NextPage);
   }
 
   @override
@@ -525,14 +526,13 @@ class _$_Search implements _Search {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Search &&
-            (identical(other.keyword, keyword) ||
-                const DeepCollectionEquality().equals(other.keyword, keyword)));
+        (other.runtimeType == runtimeType &&
+            other is _Search &&
+            (identical(other.keyword, keyword) || other.keyword == keyword));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(keyword);
+  int get hashCode => Object.hash(runtimeType, keyword);
 
   @JsonKey(ignore: true)
   @override
@@ -617,7 +617,7 @@ class _$_Search implements _Search {
 abstract class _Search implements PostsEvent {
   const factory _Search({required String keyword}) = _$_Search;
 
-  String get keyword => throw _privateConstructorUsedError;
+  String get keyword;
   @JsonKey(ignore: true)
   _$SearchCopyWith<_Search> get copyWith => throw _privateConstructorUsedError;
 }
@@ -629,12 +629,14 @@ class _$PostsStateTearOff {
   _PostsState call(
       {required bool isLoading,
       required int index,
+      required String check,
       required IList<PostItem> item,
       required Option<Either<PostFailure, PostsSearch>>
           optionFailureOrSuccess}) {
     return _PostsState(
       isLoading: isLoading,
       index: index,
+      check: check,
       item: item,
       optionFailureOrSuccess: optionFailureOrSuccess,
     );
@@ -648,6 +650,7 @@ const $PostsState = _$PostsStateTearOff();
 mixin _$PostsState {
   bool get isLoading => throw _privateConstructorUsedError;
   int get index => throw _privateConstructorUsedError;
+  String get check => throw _privateConstructorUsedError;
   IList<PostItem> get item => throw _privateConstructorUsedError;
   Option<Either<PostFailure, PostsSearch>> get optionFailureOrSuccess =>
       throw _privateConstructorUsedError;
@@ -665,6 +668,7 @@ abstract class $PostsStateCopyWith<$Res> {
   $Res call(
       {bool isLoading,
       int index,
+      String check,
       IList<PostItem> item,
       Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess});
 }
@@ -681,6 +685,7 @@ class _$PostsStateCopyWithImpl<$Res> implements $PostsStateCopyWith<$Res> {
   $Res call({
     Object? isLoading = freezed,
     Object? index = freezed,
+    Object? check = freezed,
     Object? item = freezed,
     Object? optionFailureOrSuccess = freezed,
   }) {
@@ -693,6 +698,10 @@ class _$PostsStateCopyWithImpl<$Res> implements $PostsStateCopyWith<$Res> {
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
               as int,
+      check: check == freezed
+          ? _value.check
+          : check // ignore: cast_nullable_to_non_nullable
+              as String,
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -714,6 +723,7 @@ abstract class _$PostsStateCopyWith<$Res> implements $PostsStateCopyWith<$Res> {
   $Res call(
       {bool isLoading,
       int index,
+      String check,
       IList<PostItem> item,
       Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess});
 }
@@ -732,6 +742,7 @@ class __$PostsStateCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
   $Res call({
     Object? isLoading = freezed,
     Object? index = freezed,
+    Object? check = freezed,
     Object? item = freezed,
     Object? optionFailureOrSuccess = freezed,
   }) {
@@ -744,6 +755,10 @@ class __$PostsStateCopyWithImpl<$Res> extends _$PostsStateCopyWithImpl<$Res>
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
               as int,
+      check: check == freezed
+          ? _value.check
+          : check // ignore: cast_nullable_to_non_nullable
+              as String,
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -762,6 +777,7 @@ class _$_PostsState implements _PostsState {
   const _$_PostsState(
       {required this.isLoading,
       required this.index,
+      required this.check,
       required this.item,
       required this.optionFailureOrSuccess});
 
@@ -770,38 +786,34 @@ class _$_PostsState implements _PostsState {
   @override
   final int index;
   @override
+  final String check;
+  @override
   final IList<PostItem> item;
   @override
   final Option<Either<PostFailure, PostsSearch>> optionFailureOrSuccess;
 
   @override
   String toString() {
-    return 'PostsState(isLoading: $isLoading, index: $index, item: $item, optionFailureOrSuccess: $optionFailureOrSuccess)';
+    return 'PostsState(isLoading: $isLoading, index: $index, check: $check, item: $item, optionFailureOrSuccess: $optionFailureOrSuccess)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PostsState &&
+        (other.runtimeType == runtimeType &&
+            other is _PostsState &&
             (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.index, index) ||
-                const DeepCollectionEquality().equals(other.index, index)) &&
-            (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)) &&
+                other.isLoading == isLoading) &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.check, check) || other.check == check) &&
+            (identical(other.item, item) || other.item == item) &&
             (identical(other.optionFailureOrSuccess, optionFailureOrSuccess) ||
-                const DeepCollectionEquality().equals(
-                    other.optionFailureOrSuccess, optionFailureOrSuccess)));
+                other.optionFailureOrSuccess == optionFailureOrSuccess));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(index) ^
-      const DeepCollectionEquality().hash(item) ^
-      const DeepCollectionEquality().hash(optionFailureOrSuccess);
+  int get hashCode => Object.hash(
+      runtimeType, isLoading, index, check, item, optionFailureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -813,19 +825,21 @@ abstract class _PostsState implements PostsState {
   const factory _PostsState(
       {required bool isLoading,
       required int index,
+      required String check,
       required IList<PostItem> item,
       required Option<Either<PostFailure, PostsSearch>>
           optionFailureOrSuccess}) = _$_PostsState;
 
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  int get index => throw _privateConstructorUsedError;
+  int get index;
   @override
-  IList<PostItem> get item => throw _privateConstructorUsedError;
+  String get check;
   @override
-  Option<Either<PostFailure, PostsSearch>> get optionFailureOrSuccess =>
-      throw _privateConstructorUsedError;
+  IList<PostItem> get item;
+  @override
+  Option<Either<PostFailure, PostsSearch>> get optionFailureOrSuccess;
   @override
   @JsonKey(ignore: true)
   _$PostsStateCopyWith<_PostsState> get copyWith =>

@@ -2,7 +2,7 @@ import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dev_showcase/domain/core/common_util.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:get/get.dart';
+
 import './failures.dart';
 
 class ValueValidators {
@@ -64,7 +64,7 @@ class ValueValidators {
   }
 
   static Either<ValueFailure<String>, String> validatePhone(String input) {
-    if (input.isPhoneNumber) {
+    if (CommonUtils.validatePhone(input)) {
       debugPrint('right $input');
       return right(input);
     } else {
@@ -74,7 +74,7 @@ class ValueValidators {
   }
 
   static Either<ValueFailure<String>, String> validateEmail(String input) {
-    if (input.isEmail) {
+    if (CommonUtils.validateEmail(input)) {
       return right(input);
     } else {
       return left(ValueFailure.invalidEmail(failedValue: input));

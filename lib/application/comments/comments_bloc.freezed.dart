@@ -145,14 +145,13 @@ class _$_Started implements _Started {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Started &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)));
+        (other.runtimeType == runtimeType &&
+            other is _Started &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(id);
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
@@ -220,7 +219,7 @@ abstract class _Started implements CommentsEvent {
   const factory _Started({required int id}) = _$_Started;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
   @JsonKey(ignore: true)
   _$StartedCopyWith<_Started> get copyWith =>
@@ -353,7 +352,8 @@ class _$_Initial implements _Initial {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Initial);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
   }
 
   @override
@@ -469,7 +469,8 @@ class _$_Loading implements _Loading {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Loading);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Loading);
   }
 
   @override
@@ -605,16 +606,14 @@ class _$_Loaded implements _Loaded {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Loaded &&
+        (other.runtimeType == runtimeType &&
+            other is _Loaded &&
             (identical(other.optionFailedOrSuccess, optionFailedOrSuccess) ||
-                const DeepCollectionEquality().equals(
-                    other.optionFailedOrSuccess, optionFailedOrSuccess)));
+                other.optionFailedOrSuccess == optionFailedOrSuccess));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(optionFailedOrSuccess);
+  int get hashCode => Object.hash(runtimeType, optionFailedOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -704,8 +703,7 @@ abstract class _Loaded implements CommentsState {
       {required Option<Either<CommentsFailure, IList<CommentItem>>>
           optionFailedOrSuccess}) = _$_Loaded;
 
-  Option<Either<CommentsFailure, IList<CommentItem>>>
-      get optionFailedOrSuccess => throw _privateConstructorUsedError;
+  Option<Either<CommentsFailure, IList<CommentItem>>> get optionFailedOrSuccess;
   @JsonKey(ignore: true)
   _$LoadedCopyWith<_Loaded> get copyWith => throw _privateConstructorUsedError;
 }
