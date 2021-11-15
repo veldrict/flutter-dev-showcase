@@ -4,8 +4,8 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+import 'package:code_id_alice/code_id_alice.dart' as _i3;
 import 'package:code_id_flutter/code_id_flutter.dart' as _i7;
-import 'package:code_id_flutter/code_packages/alice/alice.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:logger/logger.dart' as _i4;
@@ -29,7 +29,7 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
   final registerModule = _$RegisterModule();
   gh.lazySingleton<_i3.Alice>(() => registerModule.alice);
   gh.lazySingleton<_i4.Logger>(() => registerModule.logger);
-  gh.factory<_i5.MyApp>(() => _i5.MyApp());
+  gh.factory<_i5.MyApp>(() => _i5.MyApp(get<_i3.Alice>()));
   gh.factory<_i6.SimpleBlocObserver>(
       () => _i6.SimpleBlocObserver(get<_i4.Logger>()));
   gh.factory<String>(() => registerModule.baseUrl, instanceName: 'baseUrl');

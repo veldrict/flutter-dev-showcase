@@ -1,4 +1,4 @@
-import 'package:code_id_flutter/code_packages/alice/alice.dart';
+import 'package:code_id_alice/code_id_alice.dart';
 import 'package:code_id_flutter/code_services/storage/storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,10 +19,13 @@ void main() async {
 @injectable
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  final Alice alice;
 
-  final _appRouter = AppRouters();
+  MyApp(this.alice);
+
   @override
   Widget build(BuildContext context) {
+    final _appRouter = AppRouters(alice.getNavigatorKey());
     return MaterialApp.router(
         routeInformationParser: _appRouter.defaultRouteParser(),
         routerDelegate: _appRouter.delegate());

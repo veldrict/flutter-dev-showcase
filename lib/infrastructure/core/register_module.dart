@@ -1,5 +1,5 @@
+import 'package:code_id_alice/code_id_alice.dart';
 import 'package:code_id_flutter/code_id_flutter.dart';
-import 'package:code_id_flutter/code_packages/alice/alice.dart';
 
 import 'package:dio/dio.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
