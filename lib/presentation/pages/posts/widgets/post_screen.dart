@@ -59,7 +59,10 @@ class PostScreen extends StatelessWidget {
             body: Column(
               children: [
                 Container(
+                  decoration:BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade100)),
+                    ),
                   child: TextFormField(
+                    cursorColor: Colors.grey.shade100,
                       onChanged: (value) => context
                           .read<PostsBloc>()
                           .add(PostsEvent.search(keyword: value))),
