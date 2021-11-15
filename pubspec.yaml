@@ -21,26 +21,25 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  auto_route: ^3.0.4
   cached_network_image: ^3.1.0
-  code_id_flutter: 0.0.4
-    # git:
-    #   url: 
-    #   ref: 
+  code_id_flutter: ^0.0.4
   cupertino_icons: ^1.0.2
+  dartx: ^0.8.0
   fast_immutable_collections: ^7.0.3
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.0-dev.2
   flutter_hooks: ^0.18.0
   freezed_annotation: ^0.15.0
-  get: ^4.3.8
   get_it: ^7.2.0
   google_fonts: ^2.1.0
+  json_annotation: ^4.3.0
   otp_text_field: ^1.1.1
   shimmer: ^2.0.0
-  universe: ^1.1.1-nullsafety
 
 dev_dependencies:
+  auto_route_generator: ^3.0.1
   bloc_test: ^9.0.0-dev.3
   build_runner: ^2.1.4
   flutter_test:

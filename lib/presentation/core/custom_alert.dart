@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:code_id_flutter/code_utils/extensions/string_extension.dart';
 
 class CustomAlert {
   static Future<void> showAlert({
     String key = "DialogAlert",
     String? title,
+    required BuildContext context,
     required String bodyText,
     String buttonText = 'OK',
     String cancelText = 'CANCEL',
@@ -18,7 +20,7 @@ class CustomAlert {
     if (withCancel) {
       buttons.add(
         TextButton(
-          key: Key(key + cancelText.replaceAll(" ", "").capitalizeFirst!),
+          key: Key(key + cancelText.replaceAll(" ", "").capitalize()),
           child: Text(
             cancelText,
             style: TextStyle(
@@ -27,26 +29,26 @@ class CustomAlert {
           ),
           onPressed: () {
             onCancelPressed?.call();
-            Get.back();
           },
         ),
       );
     }
     buttons.add(
       TextButton(
-        key: Key(key + buttonText.replaceAll(" ", "").capitalizeFirst!),
+        key: Key(key + buttonText.replaceAll(" ", "").capitalize()),
         child: Text(
           buttonText,
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         onPressed: () {
-          Get.back();
+          context.popRoute();
           onPressed();
         },
       ),
     );
-    return Get.dialog(
-      AlertDialog(
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
         key: Key(key),
         title: title != null
             ? Text(

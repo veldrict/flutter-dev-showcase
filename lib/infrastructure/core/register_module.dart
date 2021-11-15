@@ -6,7 +6,6 @@ import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 @module
 abstract class RegisterModule {
@@ -14,13 +13,7 @@ abstract class RegisterModule {
   String get baseUrl => 'https://jsonplaceholder.typicode.com';
 
   @lazySingleton
-  HiveInterface get hive => Hive;
-
-  @lazySingleton
   Logger get logger => Logger();
-
-  @lazySingleton
-  IStorage get storage => Storage;
 
   @lazySingleton
   Alice get alice => Alice(
@@ -31,9 +24,9 @@ abstract class RegisterModule {
   @lazySingleton
   Future<INetworkService> network(
     @Named('baseUrl') String baseUrl,
-    IStorage _storage,
     Alice alice,
   ) async {
+    IStorage _storage = Storage;
     await _storage.openBox('authKey');
     IList<Interceptor> interceptors = [
       AuthInterceptor(

@@ -34,7 +34,7 @@ class _$PostItemTearOff {
     );
   }
 
-  PostItem fromJson(Map<String, Object> json) {
+  PostItem fromJson(Map<String, Object?> json) {
     return PostItem.fromJson(json);
   }
 }
@@ -177,24 +177,16 @@ class _$_PostItem extends _PostItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PostItem &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
-            (identical(other.ids, ids) ||
-                const DeepCollectionEquality().equals(other.ids, ids)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.body, body) ||
-                const DeepCollectionEquality().equals(other.body, body)));
+        (other.runtimeType == runtimeType &&
+            other is _PostItem &&
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.ids, ids) || other.ids == ids) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.body, body) || other.body == body));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
-      const DeepCollectionEquality().hash(ids) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(body);
+  int get hashCode => Object.hash(runtimeType, userId, ids, title, body);
 
   @JsonKey(ignore: true)
   @override
@@ -218,14 +210,14 @@ abstract class _PostItem extends PostItem {
   factory _PostItem.fromJson(Map<String, dynamic> json) = _$_PostItem.fromJson;
 
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get userId;
   @override
   @JsonKey(name: 'id')
-  int get ids => throw _privateConstructorUsedError;
+  int get ids;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  String get body => throw _privateConstructorUsedError;
+  String get body;
   @override
   @JsonKey(ignore: true)
   _$PostItemCopyWith<_PostItem> get copyWith =>
