@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
 import 'package:flutter_dev_showcase/injection.dart';
+import 'package:flutter_dev_showcase/presentation/routers/app_routers.gr.dart';
 import 'package:flutter_dev_showcase/presentation/routers/routers.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,10 +60,12 @@ class PostScreen extends StatelessWidget {
             body: Column(
               children: [
                 Container(
-                  decoration:BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade100)),
-                    ),
+                  decoration: BoxDecoration(
+                    border:
+                        Border(bottom: BorderSide(color: Colors.grey.shade100)),
+                  ),
                   child: TextFormField(
-                    cursorColor: Colors.grey.shade100,
+                      cursorColor: Colors.grey.shade100,
                       onChanged: (value) => context
                           .read<PostsBloc>()
                           .add(PostsEvent.search(keyword: value))),
@@ -83,7 +86,9 @@ class PostScreen extends StatelessWidget {
                                   PostItem item = items[index];
                                   return InkWell(
                                     onTap: () {
-                                      context.router.pushNamed(Routers.testing);
+                                      context.pushRoute(
+                                        CommentsRoute(postItem: item),
+                                      );
                                       // Get.toNamed(
                                       //   Routers.comments,
                                       //   arguments: item,

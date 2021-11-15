@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_dev_showcase/presentation/pages/comments/comments_page.dart';
 import 'package:flutter_dev_showcase/presentation/pages/posts/post_page.dart';
 import 'package:flutter_dev_showcase/presentation/pages/testing_page/testing_page.dart';
 import 'package:flutter_dev_showcase/presentation/routers/routers.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_dev_showcase/presentation/routers/routers.dart';
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
     AutoRoute(path: Routers.main, page: PostPage, initial: true),
+    AutoRoute(path: Routers.comments, page: CommentsPage),
     AutoRoute(path: Routers.testing, page: TestingPage),
   ],
 )
