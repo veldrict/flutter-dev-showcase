@@ -1,9 +1,9 @@
 import 'package:code_id_alice/code_id_alice.dart';
 import 'package:code_id_flutter/code_id_flutter.dart';
-
-import 'package:dio/dio.dart';
-import 'package:fast_immutable_collections/fast_immutable_collections.dart';
+import 'package:code_id_flutter/code_interceptors/token/refresh_token_interceptor.dart';
+import 'package:code_id_flutter/code_interfaces/storage/token_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
@@ -28,7 +28,11 @@ abstract class RegisterModule {
   ) async {
     IStorage _storage = Storage;
     await _storage.openBox('authKey');
-    IList<Interceptor> interceptors = [
+    final _client = NetworkService(
+      baseUrl: baseUrl,
+    );
+
+    _client.addInterceptors([
       AuthInterceptor(
         storage: _storage,
         authKey: 'sessionId',
@@ -40,8 +44,19 @@ abstract class RegisterModule {
           responseBody: true,
           responseHeader: true),
       alice.getDioInterceptor(),
-    ].lock;
+      RefreshTokenInterceptor<PostItem>(
+        tokenHeader: (token) {
+          return {'Authorization': 'Bearer ${token?.ids}'};
+        },
+        tokenStorage: InMemoryStorage<PostItem>(),
+        shouldRequest: (token, httpClient) async {
+          PostItem? _token = token;
+          return _token;
+        },
+        httpClient: _client,
+      )
+    ]);
 
-    return NetworkService(baseUrl: baseUrl, interceptors: interceptors);
+    return _client;
   }
 }

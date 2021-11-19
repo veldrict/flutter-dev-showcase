@@ -42,6 +42,7 @@ void main() {
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
     wait: Duration(seconds: 4),
     expect: () => [
+      _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
       _state.copyWith(
         isLoading: false,
@@ -64,6 +65,7 @@ void main() {
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
     wait: Duration(seconds: 4),
     expect: () => [
+      _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
       _state.copyWith(
         isLoading: false,
@@ -85,6 +87,7 @@ void main() {
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
     wait: Duration(seconds: 4),
     expect: () => [
+      _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
       _state.copyWith(
         isLoading: false,
@@ -107,6 +110,7 @@ void main() {
     act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
     wait: Duration(seconds: 4),
     expect: () => [
+      _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
       _state.copyWith(
         isLoading: false,
