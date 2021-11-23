@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   auto_route: ^3.0.4
+  bloc: ^8.0.1
   cached_network_image: ^3.1.0+1
   code_id_alice: ^0.0.1
   code_id_flutter: ^0.0.7-dev.7
@@ -30,7 +31,7 @@ dependencies:
   fast_immutable_collections: ^7.0.3
   flutter:
     sdk: flutter
-  flutter_bloc: ^7.3.3
+  flutter_bloc: ^8.0.0
   flutter_hooks: ^0.18.0
   freezed_annotation: ^1.0.0
   get_it: ^7.2.0
@@ -41,7 +42,7 @@ dependencies:
 
 dev_dependencies:
   auto_route_generator: ^3.0.1
-  bloc_test: ^8.5.0
+  bloc_test: ^9.0.1
   build_runner: ^2.1.5
   flutter_test:
     sdk: flutter
