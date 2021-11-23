@@ -13,7 +13,7 @@ part 'posts_event.dart';
 part 'posts_state.dart';
 part 'posts_bloc.freezed.dart';
 
-@singleton
+@lazySingleton
 class PostsBloc extends Bloc<PostsEvent, PostsState> {
   final IPostRepository postRepo;
   PostsBloc(this.postRepo) : super(PostsState.initial()) {

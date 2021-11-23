@@ -3,52 +3,44 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
-import 'package:flutter_dev_showcase/injection.dart';
+import 'package:flutter_dev_showcase/presentation/core/custom_alert.dart';
 import 'package:flutter_dev_showcase/presentation/routers/app_routers.gr.dart';
-import 'package:flutter_dev_showcase/presentation/routers/routers.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer/shimmer.dart';
-
-class PostPage extends HookWidget {
-  const PostPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider<PostsBloc>(
-      create: (context) => getIt<PostsBloc>(),
-      child: PostScreen(),
-    );
-  }
-}
 
 class PostScreen extends StatelessWidget {
   const PostScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final PostsBloc bloc = context.read<PostsBloc>();
+    // log('${context.watch<PostsBloc>().state}');
     return BlocConsumer<PostsBloc, PostsState>(
       listener: (BuildContext context, PostsState state) {
         state.optionFailureOrSuccess.match(
           (a) => a.fold(
-            (l) {}
-            // l.map(
-            // noData: (_) {
-            //   CustomAlert.showAlert(
-            //       bodyText: 'There no data', onPressed: () {});
-            // },
-            // noInternet: (_) {
-            //   CustomAlert.showAlert(
-            //       bodyText: 'Please check your internet connection',
-            //       onPressed: () {});
-            // },
-            // failed: (_) {
-            //   CustomAlert.showAlert(
-            //       bodyText: 'Server Error,\nplease try again later',
-            //       onPressed: () {});
-            // },
-            // ),
-            ,
+            (l) {
+              l.map(
+                noData: (_) {
+                  CustomAlert.showAlert(
+                      context: context,
+                      bodyText: 'There no data',
+                      onPressed: () {});
+                },
+                noInternet: (_) {
+                  CustomAlert.showAlert(
+                      context: context,
+                      bodyText: 'Please check your internet connection',
+                      onPressed: () {});
+                },
+                failed: (_) {
+                  CustomAlert.showAlert(
+                      context: context,
+                      bodyText: 'Server Error,\nplease try again later',
+                      onPressed: () {});
+                },
+              );
+            },
             (r) => null,
           ),
           () => null,
@@ -66,9 +58,8 @@ class PostScreen extends StatelessWidget {
                   ),
                   child: TextFormField(
                       cursorColor: Colors.grey.shade100,
-                      onChanged: (value) => context
-                          .read<PostsBloc>()
-                          .add(PostsEvent.search(keyword: value))),
+                      onChanged: (value) =>
+                          bloc.add(PostsEvent.search(keyword: value))),
                 ),
                 Expanded(
                   child: state.optionFailureOrSuccess.match(
