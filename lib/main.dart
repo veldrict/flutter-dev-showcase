@@ -12,8 +12,11 @@ import 'package:injectable/injectable.dart';
 void main() async {
   await Storage.init();
   await configureInjection(Environment.dev);
-  Bloc.observer = getIt<SimpleBlocObserver>();
-  runApp(getIt<MyApp>());
+
+  BlocOverrides.runZoned(
+    () => runApp(getIt<MyApp>()),
+    blocObserver: getIt<SimpleBlocObserver>(),
+  );
 }
 
 @injectable

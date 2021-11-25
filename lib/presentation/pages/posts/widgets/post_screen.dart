@@ -78,7 +78,8 @@ class PostScreen extends StatelessWidget {
                                   return InkWell(
                                     onTap: () {
                                       context.pushRoute(
-                                        CommentsRoute(postItem: item),
+                                        // CommentsRoute(postItem: item),
+                                        TestingRoute(),
                                       );
                                       // Get.toNamed(
                                       //   Routers.comments,

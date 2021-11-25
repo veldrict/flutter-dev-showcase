@@ -39,8 +39,7 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       preResolve: true);
   gh.lazySingleton<_i8.IPostRepository>(
       () => _i9.PostRepository(get<_i7.INetworkService>()));
-  gh.lazySingleton<_i10.PostsBloc>(
-      () => _i10.PostsBloc(get<_i8.IPostRepository>()));
+  gh.factory<_i10.PostsBloc>(() => _i10.PostsBloc(get<_i8.IPostRepository>()));
   gh.lazySingleton<_i11.ICommentRepository>(
       () => _i12.CommentRepository(get<_i7.INetworkService>()));
   gh.factory<_i13.CommentsBloc>(

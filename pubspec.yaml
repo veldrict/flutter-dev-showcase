@@ -24,8 +24,10 @@ dependencies:
   auto_route: ^3.0.4
   bloc: ^8.0.1
   cached_network_image: ^3.1.0+1
+  #Begining Personal Use Library
   code_id_alice: ^0.0.1
   code_id_flutter: ^0.0.7-dev.7
+  #End Of Personal use Library
   cupertino_icons: ^1.0.4
   dartx: ^0.8.0
   fast_immutable_collections: ^7.0.3

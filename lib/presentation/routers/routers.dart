@@ -3,7 +3,7 @@
 abstract class Routers {
   static const String main = '/';
   static const String comments = '/comments';
-  static const String testing = '/testing';
+  static const String testing = 'testing';
   static const String posts = '/comments/posts';
 
   // final List<GetPage> routers = [

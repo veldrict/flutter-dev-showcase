@@ -8,20 +8,27 @@ class TestingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<PostsBloc>.value(
-      value: getIt<PostsBloc>(),
-      child: BlocConsumer<PostsBloc, PostsState>(
-        listener: (context, state) {},
-        builder: (context, state) {
-          return Scaffold(
-            body: SafeArea(
-              child: Container(
-                child: Text(state.check),
-              ),
+    return BlocConsumer<PostsBloc, PostsState>(
+      listener: (context, state) {},
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(),
+          body: SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  child: Text(state.check),
+                ),
+                TextFormField(
+                  onChanged: (val) => context.read<PostsBloc>().add(
+                        PostsEvent.search(keyword: val),
+                      ),
+                ),
+              ],
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
