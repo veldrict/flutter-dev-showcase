@@ -1,4 +1,5 @@
-import 'package:code_id_flutter/code_id_flutter.dart';
+import 'package:code_id_network/code_id_network.dart';
+import 'package:code_id_storage/code_id_storage.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter_dev_showcase/domain/comments/comments_failure.dart';
 
@@ -15,24 +16,28 @@ class CommentRepository implements ICommentRepository {
   @override
   Future<Either<CommentsFailure, IList<CommentItem>>> getComment(int id) async {
     var response = await _network.getHttp(path: '/posts/$id/comments');
+    await Storage.openLazyBox('data');
+    await Storage.putData(data: {'id': id});
     return response.match(
       (l) => l.when(
-        noInternet: () => left(CommentsFailure.noInternet()),
-        serverError: (response) => left(CommentsFailure.failed()),
-        timeout: () => left(CommentsFailure.failed()),
-        other: (value) => left(
-          CommentsFailure.failed(),
-        ),
-      ),
+          noInternet: () => left(const CommentsFailure.noInternet()),
+          serverError: (response) => left(const CommentsFailure.failed()),
+          timeout: () => left(const CommentsFailure.failed()),
+          other: (e) {
+            if (e.error is RevokeTokenException) {}
+            return left(
+              const CommentsFailure.failed(),
+            );
+          }),
       (r) {
         List datas = r as List;
-        if (datas.length > 0) {
+        if (datas.isNotEmpty) {
           IList<CommentItem> items =
               List<CommentItem>.from(datas.map((e) => CommentItem.fromJson(e)))
                   .toIList();
           return right(items);
         }
-        return left(CommentsFailure.noData());
+        return left(const CommentsFailure.noData());
       },
     );
   }

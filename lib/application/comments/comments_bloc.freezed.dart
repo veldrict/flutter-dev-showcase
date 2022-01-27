@@ -147,11 +147,12 @@ class _$_Started implements _Started {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Started &&
-            (identical(other.id, id) || other.id == id));
+            const DeepCollectionEquality().equals(other.id, id));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
 
   @JsonKey(ignore: true)
   @override
@@ -608,12 +609,13 @@ class _$_Loaded implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Loaded &&
-            (identical(other.optionFailedOrSuccess, optionFailedOrSuccess) ||
-                other.optionFailedOrSuccess == optionFailedOrSuccess));
+            const DeepCollectionEquality()
+                .equals(other.optionFailedOrSuccess, optionFailedOrSuccess));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, optionFailedOrSuccess);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(optionFailedOrSuccess));
 
   @JsonKey(ignore: true)
   @override

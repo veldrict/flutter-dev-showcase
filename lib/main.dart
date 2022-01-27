@@ -1,9 +1,8 @@
-import 'package:code_id_alice/code_id_alice.dart';
-import 'package:code_id_flutter/code_services/storage/storage.dart';
+import 'package:code_id_storage/code_id_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dev_showcase/injection.dart';
-import 'package:flutter_dev_showcase/presentation/routers/app_routers.gr.dart';
+import 'package:flutter_dev_showcase/presentation/routers/app_routers.dart';
 
 import 'package:flutter_dev_showcase/simple_bloc_delegate.dart';
 
@@ -22,16 +21,16 @@ void main() async {
 @injectable
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  final Alice alice;
 
-  MyApp(this.alice);
+  final AppRouters appRouters;
+
+  const MyApp({required this.appRouters});
 
   @override
   Widget build(BuildContext context) {
-    final _appRouter = AppRouters(alice.getNavigatorKey());
     return MaterialApp.router(
-        routeInformationParser: _appRouter.defaultRouteParser(),
-        routerDelegate: _appRouter.delegate());
+        routeInformationParser: appRouters.defaultRouteParser(),
+        routerDelegate: appRouters.delegate());
 
     // Get.changeThemeMode(Them)
   }

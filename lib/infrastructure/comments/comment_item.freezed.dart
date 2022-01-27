@@ -206,15 +206,21 @@ class _$_CommentItem implements _CommentItem {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommentItem &&
-            (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.ids, ids) || other.ids == ids) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.body, body) || other.body == body));
+            const DeepCollectionEquality().equals(other.postId, postId) &&
+            const DeepCollectionEquality().equals(other.ids, ids) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.body, body));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, postId, ids, name, email, body);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(postId),
+      const DeepCollectionEquality().hash(ids),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(body));
 
   @JsonKey(ignore: true)
   @override

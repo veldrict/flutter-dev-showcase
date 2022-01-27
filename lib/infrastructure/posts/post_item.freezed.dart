@@ -179,14 +179,19 @@ class _$_PostItem extends _PostItem {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PostItem &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.ids, ids) || other.ids == ids) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.body, body) || other.body == body));
+            const DeepCollectionEquality().equals(other.userId, userId) &&
+            const DeepCollectionEquality().equals(other.ids, ids) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.body, body));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userId, ids, title, body);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(userId),
+      const DeepCollectionEquality().hash(ids),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(body));
 
   @JsonKey(ignore: true)
   @override

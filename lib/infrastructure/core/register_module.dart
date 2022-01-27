@@ -1,9 +1,8 @@
 import 'package:code_id_alice/code_id_alice.dart';
-import 'package:code_id_flutter/code_id_flutter.dart';
-import 'package:code_id_flutter/code_interceptors/token/refresh_token_interceptor.dart';
-import 'package:code_id_flutter/code_interfaces/storage/token_storage.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
+import 'package:code_id_network/code_id_network.dart';
+import 'package:code_id_storage/code_id_storage.dart';
+import 'package:flutter_dev_showcase/presentation/routers/app_routers.dart';
+
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
@@ -16,8 +15,11 @@ abstract class RegisterModule {
   Logger get logger => Logger();
 
   @lazySingleton
-  Alice get alice => Alice(
-        navigatorKey: GlobalKey<NavigatorState>(),
+  AppRouters get appRouter => AppRouters();
+
+  @lazySingleton
+  Alice alice(AppRouters appRouters) => Alice(
+        navigatorKey: appRouters.navigatorKey,
       );
 
   @preResolve
@@ -36,6 +38,9 @@ abstract class RegisterModule {
       AuthInterceptor(
         storage: _storage,
         authKey: 'sessionId',
+        authHeadersBuilder: (token) {
+          return {'Authorization': '$token'};
+        },
       ),
       LoggerInterceptor(
           requestBody: true,
@@ -44,17 +49,6 @@ abstract class RegisterModule {
           responseBody: true,
           responseHeader: true),
       alice.getDioInterceptor(),
-      RefreshTokenInterceptor<PostItem>(
-        tokenHeader: (token) {
-          return {'Authorization': 'Bearer ${token?.ids}'};
-        },
-        tokenStorage: InMemoryStorage<PostItem>(),
-        shouldRequest: (token, httpClient) async {
-          PostItem? _token = token;
-          return _token;
-        },
-        httpClient: _client,
-      )
     ]);
 
     return _client;

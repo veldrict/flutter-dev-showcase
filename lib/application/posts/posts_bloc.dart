@@ -5,9 +5,9 @@ import 'package:flutter_dev_showcase/domain/posts/post_failure.dart';
 import 'package:flutter_dev_showcase/domain/posts/posts_objects.dart';
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
 import 'package:fpdart/fpdart.dart';
+import 'package:stream_transform/stream_transform.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rxdart/rxdart.dart';
 
 part 'posts_event.dart';
 part 'posts_state.dart';
@@ -73,8 +73,8 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
           events.where((event) => event is! _Search);
       final Stream<PostsEvent> debounceStream = events
           .where((event) => event is _Search)
-          .debounceTime(const Duration(milliseconds: 300));
-      return MergeStream([nonbounceStream, debounceStream]).flatMap(mapper);
+          .debounce(const Duration(milliseconds: 300));
+      return nonbounceStream.merge(debounceStream).switchMap(mapper);
     };
   }
 }

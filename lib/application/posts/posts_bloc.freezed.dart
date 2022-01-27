@@ -272,11 +272,12 @@ class _$_Comments implements _Comments {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Comments &&
-            (identical(other.comment, comment) || other.comment == comment));
+            const DeepCollectionEquality().equals(other.comment, comment));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, comment);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(comment));
 
   @JsonKey(ignore: true)
   @override
@@ -528,11 +529,12 @@ class _$_Search implements _Search {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Search &&
-            (identical(other.keyword, keyword) || other.keyword == keyword));
+            const DeepCollectionEquality().equals(other.keyword, keyword));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, keyword);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(keyword));
 
   @JsonKey(ignore: true)
   @override
@@ -802,18 +804,22 @@ class _$_PostsState implements _PostsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PostsState &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
-            (identical(other.index, index) || other.index == index) &&
-            (identical(other.check, check) || other.check == check) &&
-            (identical(other.item, item) || other.item == item) &&
-            (identical(other.optionFailureOrSuccess, optionFailureOrSuccess) ||
-                other.optionFailureOrSuccess == optionFailureOrSuccess));
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(other.index, index) &&
+            const DeepCollectionEquality().equals(other.check, check) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
+            const DeepCollectionEquality()
+                .equals(other.optionFailureOrSuccess, optionFailureOrSuccess));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, isLoading, index, check, item, optionFailureOrSuccess);
+      runtimeType,
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(index),
+      const DeepCollectionEquality().hash(check),
+      const DeepCollectionEquality().hash(item),
+      const DeepCollectionEquality().hash(optionFailureOrSuccess));
 
   @JsonKey(ignore: true)
   @override

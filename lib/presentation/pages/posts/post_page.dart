@@ -4,16 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
 import 'package:flutter_dev_showcase/injection.dart';
 
-import 'package:flutter_hooks/flutter_hooks.dart';
-
-class PostPage extends HookWidget {
-  const PostPage({Key? key}) : super(key: key);
+class PostWrapperPage extends StatelessWidget {
+  const PostWrapperPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider<PostsBloc>(
-      create: (context) => getIt<PostsBloc>()..add(PostsEvent.started()),
-      child: AutoRouter(),
+      create: (context) => getIt<PostsBloc>()..add(const PostsEvent.started()),
+      child: const AutoRouter(),
     );
   }
 }

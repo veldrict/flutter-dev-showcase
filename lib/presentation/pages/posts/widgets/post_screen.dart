@@ -4,12 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';
 import 'package:flutter_dev_showcase/presentation/core/custom_alert.dart';
-import 'package:flutter_dev_showcase/presentation/routers/app_routers.gr.dart';
+import 'package:flutter_dev_showcase/presentation/routers/app_routers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer/shimmer.dart';
 
-class PostScreen extends StatelessWidget {
-  const PostScreen({Key? key}) : super(key: key);
+class PostPage extends StatelessWidget {
+  const PostPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,12 +64,12 @@ class PostScreen extends StatelessWidget {
                 Expanded(
                   child: state.optionFailureOrSuccess.match(
                     (options) => options.fold(
-                        (l) => Center(
-                              child: Text("No Data"),
+                        (l) => const Center(
+                              child: Text('No Data'),
                             ),
                         (search) => search.value.match(
-                              (_) => Center(
-                                child: Text("Not Found"),
+                              (_) => const Center(
+                                child: Text('Not Found'),
                               ),
                               (items) => ListView.builder(
                                 itemCount: search.getOrCrash().length,
@@ -78,13 +78,9 @@ class PostScreen extends StatelessWidget {
                                   return InkWell(
                                     onTap: () {
                                       context.pushRoute(
-                                        // CommentsRoute(postItem: item),
-                                        TestingRoute(),
+                                        CommentsRoute(postItem: item),
+                                        // const TestingRoute(),
                                       );
-                                      // Get.toNamed(
-                                      //   Routers.comments,
-                                      //   arguments: item,
-                                      // );
                                     },
                                     child: Card(
                                       elevation: 3,
@@ -92,9 +88,9 @@ class PostScreen extends StatelessWidget {
                                           borderRadius:
                                               BorderRadius.circular(10)),
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      margin: EdgeInsets.all(5),
+                                      margin: const EdgeInsets.all(5),
                                       child: Container(
-                                        padding: EdgeInsets.all(15),
+                                        padding: const EdgeInsets.all(15),
                                         height: 200,
                                         child: Column(
                                           crossAxisAlignment:
@@ -132,9 +128,9 @@ class PostScreen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
                             clipBehavior: Clip.antiAliasWithSaveLayer,
-                            margin: EdgeInsets.all(5),
+                            margin: const EdgeInsets.all(5),
                             child: Container(
-                              padding: EdgeInsets.all(15),
+                              padding: const EdgeInsets.all(15),
                               height: 200,
                               child: Shimmer.fromColors(
                                 baseColor: Colors.grey.shade300,

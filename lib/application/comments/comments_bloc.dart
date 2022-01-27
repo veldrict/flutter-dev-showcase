@@ -14,10 +14,10 @@ part 'comments_bloc.freezed.dart';
 @injectable
 class CommentsBloc extends Bloc<CommentsEvent, CommentsState> {
   final ICommentRepository commentRepo;
-  CommentsBloc(this.commentRepo) : super(_Initial()) {
+  CommentsBloc(this.commentRepo) : super(const _Initial()) {
     on<CommentsEvent>((event, emit) async {
       await event.when(started: (id) async {
-        emit(CommentsState.loading());
+        emit(const CommentsState.loading());
         var resp = await commentRepo.getComment(id);
         emit(
           CommentsState.loaded(optionFailedOrSuccess: optionOf(resp)),

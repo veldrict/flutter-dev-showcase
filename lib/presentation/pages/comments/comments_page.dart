@@ -14,7 +14,8 @@ class CommentsPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<CommentsBloc>(
-      create: (context) => getIt<CommentsBloc>(),
+      create: (context) =>
+          getIt<CommentsBloc>()..add(CommentsEvent.started(id: postItem.ids)),
       child: BlocConsumer<CommentsBloc, CommentsState>(
         listener: (context, state) {},
         builder: (context, state) {
@@ -23,14 +24,14 @@ class CommentsPage extends HookWidget {
                 appBar: AppBar(
                   centerTitle: false,
                   backgroundColor: Colors.blue.shade600,
-                  iconTheme: IconThemeData(color: Colors.black),
+                  iconTheme: const IconThemeData(color: Colors.black),
                   title: Text(
                     'Post Detail',
                     style: GoogleFonts.mulish(fontSize: 18),
                   ),
                 ),
                 body: Container(
-                  margin: EdgeInsets.only(top: 10),
+                  margin: const EdgeInsets.only(top: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -39,9 +40,9 @@ class CommentsPage extends HookWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         child: Container(
-                          padding: EdgeInsets.all(15),
+                          padding: const EdgeInsets.all(15),
                           height: 200,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

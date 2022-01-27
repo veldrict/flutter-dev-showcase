@@ -328,12 +328,14 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
             other is ExceedingLength<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            (identical(other.max, max) || other.max == max));
+            const DeepCollectionEquality().equals(other.max, max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(max));
 
   @JsonKey(ignore: true)
   @override
@@ -559,12 +561,14 @@ class _$TooShort<T> implements TooShort<T> {
             other is TooShort<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            (identical(other.min, min) || other.min == min));
+            const DeepCollectionEquality().equals(other.min, min));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(failedValue), min);
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(min));
 
   @JsonKey(ignore: true)
   @override
@@ -1232,12 +1236,14 @@ class _$ListTooLong<T> implements ListTooLong<T> {
             other is ListTooLong<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            (identical(other.max, max) || other.max == max));
+            const DeepCollectionEquality().equals(other.max, max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(max));
 
   @JsonKey(ignore: true)
   @override
@@ -2766,14 +2772,17 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ExceedBalance<T> &&
-            (identical(other.failedValue, failedValue) ||
-                other.failedValue == failedValue) &&
-            (identical(other.maxBalance, maxBalance) ||
-                other.maxBalance == maxBalance));
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality()
+                .equals(other.maxBalance, maxBalance));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, failedValue, maxBalance);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(maxBalance));
 
   @JsonKey(ignore: true)
   @override
@@ -2999,13 +3008,16 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is InvalidDateTime<T> &&
-            (identical(other.failedValue, failedValue) ||
-                other.failedValue == failedValue) &&
-            (identical(other.pattern, pattern) || other.pattern == pattern));
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.pattern, pattern));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, failedValue, pattern);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(pattern));
 
   @JsonKey(ignore: true)
   @override
@@ -3670,11 +3682,12 @@ class _$_SearchNotFound<T> implements _SearchNotFound<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SearchNotFound<T> &&
-            (identical(other.keyword, keyword) || other.keyword == keyword));
+            const DeepCollectionEquality().equals(other.keyword, keyword));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, keyword);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(keyword));
 
   @JsonKey(ignore: true)
   @override

@@ -8,69 +8,63 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:flutter/material.dart' as _i6;
+part of 'app_routers.dart';
 
-import '../../infrastructure/posts/post_item.dart' as _i7;
-import '../pages/comments/comments_page.dart' as _i2;
-import '../pages/posts/post_page.dart' as _i1;
-import '../pages/posts/widgets/post_screen.dart' as _i3;
-import '../pages/testing_page/testing_page.dart' as _i4;
-
-class AppRouters extends _i5.RootStackRouter {
-  AppRouters([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+class _$AppRouters extends RootStackRouter {
+  _$AppRouters([GlobalKey<NavigatorState>? navigatorKey]) : super(navigatorKey);
 
   @override
-  final Map<String, _i5.PageFactory> pagesMap = {
-    PostRoute.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.PostPage());
+  final Map<String, PageFactory> pagesMap = {
+    PostWrapperRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const PostWrapperPage());
     },
     CommentsRoute.name: (routeData) {
       final args = routeData.argsAs<CommentsRouteArgs>();
-      return _i5.MaterialPageX<dynamic>(
+      return MaterialPageX<dynamic>(
           routeData: routeData,
-          child: _i2.CommentsPage(key: args.key, postItem: args.postItem));
+          child: CommentsPage(key: args.key, postItem: args.postItem));
     },
-    PostScreen.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i3.PostScreen());
+    PostRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const PostPage());
     },
     TestingRoute.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i4.TestingPage());
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const TestingPage());
     }
   };
 
   @override
-  List<_i5.RouteConfig> get routes => [
-        _i5.RouteConfig(PostRoute.name, path: '/', children: [
-          _i5.RouteConfig(PostScreen.name, path: '', parent: PostRoute.name),
-          _i5.RouteConfig(TestingRoute.name,
-              path: 'testing', parent: PostRoute.name),
-          _i5.RouteConfig('*#redirect',
+  List<RouteConfig> get routes => [
+        RouteConfig(PostWrapperRoute.name, path: '/', children: [
+          RouteConfig(PostRoute.name, path: '', parent: PostWrapperRoute.name),
+          RouteConfig(TestingRoute.name,
+              path: 'testing', parent: PostWrapperRoute.name),
+          RouteConfig('*#redirect',
               path: '*',
-              parent: PostRoute.name,
+              parent: PostWrapperRoute.name,
               redirectTo: '',
               fullMatch: true)
         ]),
-        _i5.RouteConfig(CommentsRoute.name, path: '/comments')
+        RouteConfig(CommentsRoute.name, path: '/comments')
       ];
 }
 
-/// generated route for [_i1.PostPage]
-class PostRoute extends _i5.PageRouteInfo<void> {
-  const PostRoute({List<_i5.PageRouteInfo>? children})
-      : super(name, path: '/', initialChildren: children);
+/// generated route for
+/// [PostWrapperPage]
+class PostWrapperRoute extends PageRouteInfo<void> {
+  const PostWrapperRoute({List<PageRouteInfo>? children})
+      : super(PostWrapperRoute.name, path: '/', initialChildren: children);
 
-  static const String name = 'PostRoute';
+  static const String name = 'PostWrapperRoute';
 }
 
-/// generated route for [_i2.CommentsPage]
-class CommentsRoute extends _i5.PageRouteInfo<CommentsRouteArgs> {
-  CommentsRoute({_i6.Key? key, required _i7.PostItem postItem})
-      : super(name,
+/// generated route for
+/// [CommentsPage]
+class CommentsRoute extends PageRouteInfo<CommentsRouteArgs> {
+  CommentsRoute({Key? key, required PostItem postItem})
+      : super(CommentsRoute.name,
             path: '/comments',
             args: CommentsRouteArgs(key: key, postItem: postItem));
 
@@ -80,9 +74,9 @@ class CommentsRoute extends _i5.PageRouteInfo<CommentsRouteArgs> {
 class CommentsRouteArgs {
   const CommentsRouteArgs({this.key, required this.postItem});
 
-  final _i6.Key? key;
+  final Key? key;
 
-  final _i7.PostItem postItem;
+  final PostItem postItem;
 
   @override
   String toString() {
@@ -90,16 +84,18 @@ class CommentsRouteArgs {
   }
 }
 
-/// generated route for [_i3.PostScreen]
-class PostScreen extends _i5.PageRouteInfo<void> {
-  const PostScreen() : super(name, path: '');
+/// generated route for
+/// [PostPage]
+class PostRoute extends PageRouteInfo<void> {
+  const PostRoute() : super(PostRoute.name, path: '');
 
-  static const String name = 'PostScreen';
+  static const String name = 'PostRoute';
 }
 
-/// generated route for [_i4.TestingPage]
-class TestingRoute extends _i5.PageRouteInfo<void> {
-  const TestingRoute() : super(name, path: 'testing');
+/// generated route for
+/// [TestingPage]
+class TestingRoute extends PageRouteInfo<void> {
+  const TestingRoute() : super(TestingRoute.name, path: 'testing');
 
   static const String name = 'TestingRoute';
 }
