@@ -36,11 +36,11 @@ void main() {
     'Started Event Failed',
     build: () {
       when(() => postRepo.getPostData())
-          .thenAnswer((_) async => left(PostFailure.failed()));
+          .thenAnswer((_) async => left(const PostFailure.failed()));
       return postBloc;
     },
-    act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
-    wait: Duration(seconds: 4),
+    act: (PostsBloc bloc) => bloc.add(const PostsEvent.started()),
+    wait: const Duration(seconds: 4),
     expect: () => [
       _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
@@ -48,7 +48,7 @@ void main() {
         isLoading: false,
         optionFailureOrSuccess: optionOf(
           left(
-            PostFailure.failed(),
+            const PostFailure.failed(),
           ),
         ),
       ),
@@ -59,11 +59,11 @@ void main() {
     'Started Event no internet',
     build: () {
       when(() => postRepo.getPostData())
-          .thenAnswer((_) async => left(PostFailure.noInternet()));
+          .thenAnswer((_) async => left(const PostFailure.noInternet()));
       return postBloc;
     },
-    act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
-    wait: Duration(seconds: 4),
+    act: (PostsBloc bloc) => bloc.add(const PostsEvent.started()),
+    wait: const Duration(seconds: 4),
     expect: () => [
       _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
@@ -71,7 +71,7 @@ void main() {
         isLoading: false,
         optionFailureOrSuccess: optionOf(
           left(
-            PostFailure.noInternet(),
+            const PostFailure.noInternet(),
           ),
         ),
       ),
@@ -81,11 +81,11 @@ void main() {
     'Started Event no data',
     build: () {
       when(() => postRepo.getPostData())
-          .thenAnswer((_) async => left(PostFailure.noData()));
+          .thenAnswer((_) async => left(const PostFailure.noData()));
       return postBloc;
     },
-    act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
-    wait: Duration(seconds: 4),
+    act: (PostsBloc bloc) => bloc.add(const PostsEvent.started()),
+    wait: const Duration(seconds: 4),
     expect: () => [
       _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),
@@ -93,7 +93,7 @@ void main() {
         isLoading: false,
         optionFailureOrSuccess: optionOf(
           left(
-            PostFailure.noData(),
+            const PostFailure.noData(),
           ),
         ),
       ),
@@ -107,8 +107,8 @@ void main() {
           .thenAnswer((_) async => right(_listItem));
       return postBloc;
     },
-    act: (PostsBloc bloc) => bloc.add(PostsEvent.started()),
-    wait: Duration(seconds: 4),
+    act: (PostsBloc bloc) => bloc.add(const PostsEvent.started()),
+    wait: const Duration(seconds: 4),
     expect: () => [
       _state.copyWith(isLoading: false),
       _state.copyWith(isLoading: true),

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:code_id_storage/code_id_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,6 +14,7 @@ void main() async {
   await Storage.init();
   await configureInjection(Environment.dev);
 
+  // runZonedGuarded(body, onError)
   BlocOverrides.runZoned(
     () => runApp(getIt<MyApp>()),
     blocObserver: getIt<SimpleBlocObserver>(),

@@ -19,9 +19,9 @@ void main() {
     _repo = MockCommentRepo();
     _bloc = CommentsBloc(_repo);
     _listItem = <CommentItem>[
-      CommentItem(
+      const CommentItem(
           postId: 1, ids: 1, name: 'name', email: 'email', body: 'body'),
-      CommentItem(
+      const CommentItem(
           postId: 1, ids: 2, name: 'name 2', email: 'email 2', body: 'body 2'),
     ].toIList();
   });
@@ -35,14 +35,14 @@ void main() {
     'Started Event Failed',
     build: () {
       when(() => _repo.getComment(1))
-          .thenAnswer((_) async => left(CommentsFailure.failed()));
+          .thenAnswer((_) async => left(const CommentsFailure.failed()));
       return _bloc;
     },
-    act: (CommentsBloc bloc) => bloc.add(CommentsEvent.started(id: 1)),
+    act: (CommentsBloc bloc) => bloc.add(const CommentsEvent.started(id: 1)),
     expect: () => [
-      CommentsState.loading(),
+      const CommentsState.loading(),
       CommentsState.loaded(
-          optionFailedOrSuccess: optionOf(left(CommentsFailure.failed())))
+          optionFailedOrSuccess: optionOf(left(const CommentsFailure.failed())))
     ],
   );
 
