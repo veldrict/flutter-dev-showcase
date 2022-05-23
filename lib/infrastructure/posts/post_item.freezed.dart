@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'post_item.dart';
@@ -11,36 +12,11 @@ part of 'post_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PostItem _$PostItemFromJson(Map<String, dynamic> json) {
   return _PostItem.fromJson(json);
 }
-
-/// @nodoc
-class _$PostItemTearOff {
-  const _$PostItemTearOff();
-
-  _PostItem call(
-      {required int userId,
-      @JsonKey(name: 'id') required int ids,
-      required String title,
-      required String body}) {
-    return _PostItem(
-      userId: userId,
-      ids: ids,
-      title: title,
-      body: body,
-    );
-  }
-
-  PostItem fromJson(Map<String, Object?> json) {
-    return PostItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PostItem = _$PostItemTearOff();
 
 /// @nodoc
 mixin _$PostItem {
@@ -101,22 +77,24 @@ class _$PostItemCopyWithImpl<$Res> implements $PostItemCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PostItemCopyWith<$Res> implements $PostItemCopyWith<$Res> {
-  factory _$PostItemCopyWith(_PostItem value, $Res Function(_PostItem) then) =
-      __$PostItemCopyWithImpl<$Res>;
+abstract class _$$_PostItemCopyWith<$Res> implements $PostItemCopyWith<$Res> {
+  factory _$$_PostItemCopyWith(
+          _$_PostItem value, $Res Function(_$_PostItem) then) =
+      __$$_PostItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {int userId, @JsonKey(name: 'id') int ids, String title, String body});
 }
 
 /// @nodoc
-class __$PostItemCopyWithImpl<$Res> extends _$PostItemCopyWithImpl<$Res>
-    implements _$PostItemCopyWith<$Res> {
-  __$PostItemCopyWithImpl(_PostItem _value, $Res Function(_PostItem) _then)
-      : super(_value, (v) => _then(v as _PostItem));
+class __$$_PostItemCopyWithImpl<$Res> extends _$PostItemCopyWithImpl<$Res>
+    implements _$$_PostItemCopyWith<$Res> {
+  __$$_PostItemCopyWithImpl(
+      _$_PostItem _value, $Res Function(_$_PostItem) _then)
+      : super(_value, (v) => _then(v as _$_PostItem));
 
   @override
-  _PostItem get _value => super._value as _PostItem;
+  _$_PostItem get _value => super._value as _$_PostItem;
 
   @override
   $Res call({
@@ -125,7 +103,7 @@ class __$PostItemCopyWithImpl<$Res> extends _$PostItemCopyWithImpl<$Res>
     Object? title = freezed,
     Object? body = freezed,
   }) {
-    return _then(_PostItem(
+    return _then(_$_PostItem(
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -178,13 +156,14 @@ class _$_PostItem extends _PostItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PostItem &&
+            other is _$_PostItem &&
             const DeepCollectionEquality().equals(other.userId, userId) &&
             const DeepCollectionEquality().equals(other.ids, ids) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.body, body));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -195,8 +174,8 @@ class _$_PostItem extends _PostItem {
 
   @JsonKey(ignore: true)
   @override
-  _$PostItemCopyWith<_PostItem> get copyWith =>
-      __$PostItemCopyWithImpl<_PostItem>(this, _$identity);
+  _$$_PostItemCopyWith<_$_PostItem> get copyWith =>
+      __$$_PostItemCopyWithImpl<_$_PostItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -206,25 +185,25 @@ class _$_PostItem extends _PostItem {
 
 abstract class _PostItem extends PostItem {
   factory _PostItem(
-      {required int userId,
-      @JsonKey(name: 'id') required int ids,
-      required String title,
-      required String body}) = _$_PostItem;
+      {required final int userId,
+      @JsonKey(name: 'id') required final int ids,
+      required final String title,
+      required final String body}) = _$_PostItem;
   _PostItem._() : super._();
 
   factory _PostItem.fromJson(Map<String, dynamic> json) = _$_PostItem.fromJson;
 
   @override
-  int get userId;
+  int get userId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'id')
-  int get ids;
+  int get ids => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  String get body;
+  String get body => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PostItemCopyWith<_PostItem> get copyWith =>
+  _$$_PostItemCopyWith<_$_PostItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

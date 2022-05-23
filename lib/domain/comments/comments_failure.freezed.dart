@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'comments_failure.dart';
@@ -11,27 +12,7 @@ part of 'comments_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CommentsFailureTearOff {
-  const _$CommentsFailureTearOff();
-
-  _NoData noData() {
-    return const _NoData();
-  }
-
-  _NoInternet noInternet() {
-    return const _NoInternet();
-  }
-
-  _Failed failed() {
-    return const _Failed();
-  }
-}
-
-/// @nodoc
-const $CommentsFailure = _$CommentsFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CommentsFailure {
@@ -99,19 +80,19 @@ class _$CommentsFailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$NoDataCopyWith<$Res> {
-  factory _$NoDataCopyWith(_NoData value, $Res Function(_NoData) then) =
-      __$NoDataCopyWithImpl<$Res>;
+abstract class _$$_NoDataCopyWith<$Res> {
+  factory _$$_NoDataCopyWith(_$_NoData value, $Res Function(_$_NoData) then) =
+      __$$_NoDataCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NoDataCopyWithImpl<$Res> extends _$CommentsFailureCopyWithImpl<$Res>
-    implements _$NoDataCopyWith<$Res> {
-  __$NoDataCopyWithImpl(_NoData _value, $Res Function(_NoData) _then)
-      : super(_value, (v) => _then(v as _NoData));
+class __$$_NoDataCopyWithImpl<$Res> extends _$CommentsFailureCopyWithImpl<$Res>
+    implements _$$_NoDataCopyWith<$Res> {
+  __$$_NoDataCopyWithImpl(_$_NoData _value, $Res Function(_$_NoData) _then)
+      : super(_value, (v) => _then(v as _$_NoData));
 
   @override
-  _NoData get _value => super._value as _NoData;
+  _$_NoData get _value => super._value as _$_NoData;
 }
 
 /// @nodoc
@@ -127,7 +108,7 @@ class _$_NoData implements _NoData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _NoData);
+        (other.runtimeType == runtimeType && other is _$_NoData);
   }
 
   @override
@@ -207,22 +188,22 @@ abstract class _NoData implements CommentsFailure {
 }
 
 /// @nodoc
-abstract class _$NoInternetCopyWith<$Res> {
-  factory _$NoInternetCopyWith(
-          _NoInternet value, $Res Function(_NoInternet) then) =
-      __$NoInternetCopyWithImpl<$Res>;
+abstract class _$$_NoInternetCopyWith<$Res> {
+  factory _$$_NoInternetCopyWith(
+          _$_NoInternet value, $Res Function(_$_NoInternet) then) =
+      __$$_NoInternetCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NoInternetCopyWithImpl<$Res>
+class __$$_NoInternetCopyWithImpl<$Res>
     extends _$CommentsFailureCopyWithImpl<$Res>
-    implements _$NoInternetCopyWith<$Res> {
-  __$NoInternetCopyWithImpl(
-      _NoInternet _value, $Res Function(_NoInternet) _then)
-      : super(_value, (v) => _then(v as _NoInternet));
+    implements _$$_NoInternetCopyWith<$Res> {
+  __$$_NoInternetCopyWithImpl(
+      _$_NoInternet _value, $Res Function(_$_NoInternet) _then)
+      : super(_value, (v) => _then(v as _$_NoInternet));
 
   @override
-  _NoInternet get _value => super._value as _NoInternet;
+  _$_NoInternet get _value => super._value as _$_NoInternet;
 }
 
 /// @nodoc
@@ -238,7 +219,7 @@ class _$_NoInternet implements _NoInternet {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _NoInternet);
+        (other.runtimeType == runtimeType && other is _$_NoInternet);
   }
 
   @override
@@ -318,19 +299,19 @@ abstract class _NoInternet implements CommentsFailure {
 }
 
 /// @nodoc
-abstract class _$FailedCopyWith<$Res> {
-  factory _$FailedCopyWith(_Failed value, $Res Function(_Failed) then) =
-      __$FailedCopyWithImpl<$Res>;
+abstract class _$$_FailedCopyWith<$Res> {
+  factory _$$_FailedCopyWith(_$_Failed value, $Res Function(_$_Failed) then) =
+      __$$_FailedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$FailedCopyWithImpl<$Res> extends _$CommentsFailureCopyWithImpl<$Res>
-    implements _$FailedCopyWith<$Res> {
-  __$FailedCopyWithImpl(_Failed _value, $Res Function(_Failed) _then)
-      : super(_value, (v) => _then(v as _Failed));
+class __$$_FailedCopyWithImpl<$Res> extends _$CommentsFailureCopyWithImpl<$Res>
+    implements _$$_FailedCopyWith<$Res> {
+  __$$_FailedCopyWithImpl(_$_Failed _value, $Res Function(_$_Failed) _then)
+      : super(_value, (v) => _then(v as _$_Failed));
 
   @override
-  _Failed get _value => super._value as _Failed;
+  _$_Failed get _value => super._value as _$_Failed;
 }
 
 /// @nodoc
@@ -346,7 +327,7 @@ class _$_Failed implements _Failed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Failed);
+        (other.runtimeType == runtimeType && other is _$_Failed);
   }
 
   @override

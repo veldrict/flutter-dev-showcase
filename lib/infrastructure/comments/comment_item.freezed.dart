@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'comment_item.dart';
@@ -11,38 +12,11 @@ part of 'comment_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CommentItem _$CommentItemFromJson(Map<String, dynamic> json) {
   return _CommentItem.fromJson(json);
 }
-
-/// @nodoc
-class _$CommentItemTearOff {
-  const _$CommentItemTearOff();
-
-  _CommentItem call(
-      {required int postId,
-      @JsonKey(name: 'id') required int ids,
-      required String name,
-      required String email,
-      required String body}) {
-    return _CommentItem(
-      postId: postId,
-      ids: ids,
-      name: name,
-      email: email,
-      body: body,
-    );
-  }
-
-  CommentItem fromJson(Map<String, Object?> json) {
-    return CommentItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommentItem = _$CommentItemTearOff();
 
 /// @nodoc
 mixin _$CommentItem {
@@ -114,11 +88,11 @@ class _$CommentItemCopyWithImpl<$Res> implements $CommentItemCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CommentItemCopyWith<$Res>
+abstract class _$$_CommentItemCopyWith<$Res>
     implements $CommentItemCopyWith<$Res> {
-  factory _$CommentItemCopyWith(
-          _CommentItem value, $Res Function(_CommentItem) then) =
-      __$CommentItemCopyWithImpl<$Res>;
+  factory _$$_CommentItemCopyWith(
+          _$_CommentItem value, $Res Function(_$_CommentItem) then) =
+      __$$_CommentItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {int postId,
@@ -129,14 +103,14 @@ abstract class _$CommentItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommentItemCopyWithImpl<$Res> extends _$CommentItemCopyWithImpl<$Res>
-    implements _$CommentItemCopyWith<$Res> {
-  __$CommentItemCopyWithImpl(
-      _CommentItem _value, $Res Function(_CommentItem) _then)
-      : super(_value, (v) => _then(v as _CommentItem));
+class __$$_CommentItemCopyWithImpl<$Res> extends _$CommentItemCopyWithImpl<$Res>
+    implements _$$_CommentItemCopyWith<$Res> {
+  __$$_CommentItemCopyWithImpl(
+      _$_CommentItem _value, $Res Function(_$_CommentItem) _then)
+      : super(_value, (v) => _then(v as _$_CommentItem));
 
   @override
-  _CommentItem get _value => super._value as _CommentItem;
+  _$_CommentItem get _value => super._value as _$_CommentItem;
 
   @override
   $Res call({
@@ -146,7 +120,7 @@ class __$CommentItemCopyWithImpl<$Res> extends _$CommentItemCopyWithImpl<$Res>
     Object? email = freezed,
     Object? body = freezed,
   }) {
-    return _then(_CommentItem(
+    return _then(_$_CommentItem(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -205,7 +179,7 @@ class _$_CommentItem implements _CommentItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CommentItem &&
+            other is _$_CommentItem &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.ids, ids) &&
             const DeepCollectionEquality().equals(other.name, name) &&
@@ -213,6 +187,7 @@ class _$_CommentItem implements _CommentItem {
             const DeepCollectionEquality().equals(other.body, body));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -224,8 +199,8 @@ class _$_CommentItem implements _CommentItem {
 
   @JsonKey(ignore: true)
   @override
-  _$CommentItemCopyWith<_CommentItem> get copyWith =>
-      __$CommentItemCopyWithImpl<_CommentItem>(this, _$identity);
+  _$$_CommentItemCopyWith<_$_CommentItem> get copyWith =>
+      __$$_CommentItemCopyWithImpl<_$_CommentItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -235,28 +210,28 @@ class _$_CommentItem implements _CommentItem {
 
 abstract class _CommentItem implements CommentItem {
   const factory _CommentItem(
-      {required int postId,
-      @JsonKey(name: 'id') required int ids,
-      required String name,
-      required String email,
-      required String body}) = _$_CommentItem;
+      {required final int postId,
+      @JsonKey(name: 'id') required final int ids,
+      required final String name,
+      required final String email,
+      required final String body}) = _$_CommentItem;
 
   factory _CommentItem.fromJson(Map<String, dynamic> json) =
       _$_CommentItem.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'id')
-  int get ids;
+  int get ids => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @override
-  String get body;
+  String get body => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CommentItemCopyWith<_CommentItem> get copyWith =>
+  _$$_CommentItemCopyWith<_$_CommentItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

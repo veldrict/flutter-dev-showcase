@@ -1,4 +1,4 @@
-part of 'posts_bloc.dart';
+part of 'posts_controller.dart';
 
 @freezed
 class PostsState with _$PostsState {

@@ -1,4 +1,4 @@
-part of 'comments_bloc.dart';
+part of 'comments_controller.dart';
 
 @freezed
 class CommentsState with _$CommentsState {

@@ -2,7 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_dev_showcase/domain/posts/posts_objects.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
-import 'package:flutter_dev_showcase/application/posts/posts_bloc.dart';
+import 'package:flutter_dev_showcase/application/posts/posts_controller.dart';
 import 'package:flutter_dev_showcase/domain/posts/i_post_repository.dart';
 import 'package:flutter_dev_showcase/domain/posts/post_failure.dart';
 import 'package:flutter_dev_showcase/infrastructure/posts/post_item.dart';

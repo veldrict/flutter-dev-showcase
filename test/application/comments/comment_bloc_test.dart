@@ -1,7 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
-import 'package:flutter_dev_showcase/application/comments/comments_bloc.dart';
+import 'package:flutter_dev_showcase/application/comments/comments_controller.dart';
 import 'package:flutter_dev_showcase/domain/comments/comments_failure.dart';
 import 'package:flutter_dev_showcase/domain/comments/i_comment_repository.dart';
 import 'package:flutter_dev_showcase/infrastructure/comments/comment_item.dart';
