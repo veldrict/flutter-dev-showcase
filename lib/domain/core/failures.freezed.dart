@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'failures.dart';
 
@@ -11,117 +12,7 @@ part of 'failures.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ValueFailureTearOff {
-  const _$ValueFailureTearOff();
-
-  ExceedingLength<T> exceedingLength<T>(
-      {required T failedValue, required int max}) {
-    return ExceedingLength<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
-  TooShort<T> lengthTooShort<T>({required T failedValue, required int min}) {
-    return TooShort<T>(
-      failedValue: failedValue,
-      min: min,
-    );
-  }
-
-  Empty<T> empty<T>({required T failedValue}) {
-    return Empty<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  Multiline<T> multiline<T>({required T failedValue}) {
-    return Multiline<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  ListTooLong<T> listTooLong<T>({required T failedValue, required int max}) {
-    return ListTooLong<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
-  InvalidPhone<T> invalidPhone<T>({required T failedValue}) {
-    return InvalidPhone<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidEmail<T> invalidEmail<T>({required T failedValue}) {
-    return InvalidEmail<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  UnregisteredPhone<T> unregisteredPhone<T>({required T failedValue}) {
-    return UnregisteredPhone<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidObject<T> invalidObject<T>({required T failedValue}) {
-    return InvalidObject<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  EmptyObject<T> emptyObject<T>() {
-    return EmptyObject<T>();
-  }
-
-  ShortToken<T> shortToken<T>({required T failedValue}) {
-    return ShortToken<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  ExceedBalance<T> exceedingBalance<T>(
-      {required double failedValue, required double maxBalance}) {
-    return ExceedBalance<T>(
-      failedValue: failedValue,
-      maxBalance: maxBalance,
-    );
-  }
-
-  InvalidDateTime<T> invalidDateTime<T>(
-      {required DateTime failedValue, required String pattern}) {
-    return InvalidDateTime<T>(
-      failedValue: failedValue,
-      pattern: pattern,
-    );
-  }
-
-  NoteExceed<T> noteExceed<T>({required T failedValue}) {
-    return NoteExceed<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  ConfirmationNotMatch<T> confirmationNotMatch<T>({required T failedValue}) {
-    return ConfirmationNotMatch<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  _SearchNotFound<T> searchNotFound<T>({required String keyword}) {
-    return _SearchNotFound<T>(
-      keyword: keyword,
-    );
-  }
-}
-
-/// @nodoc
-const $ValueFailure = _$ValueFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ValueFailure<T> {
@@ -149,22 +40,22 @@ mixin _$ValueFailure<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -211,22 +102,22 @@ mixin _$ValueFailure<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -256,49 +147,49 @@ mixin _$ValueFailure<T> {
 abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
-      _$ValueFailureCopyWithImpl<T, $Res>;
+      _$ValueFailureCopyWithImpl<T, $Res, ValueFailure<T>>;
 }
 
 /// @nodoc
-class _$ValueFailureCopyWithImpl<T, $Res>
+class _$ValueFailureCopyWithImpl<T, $Res, $Val extends ValueFailure<T>>
     implements $ValueFailureCopyWith<T, $Res> {
   _$ValueFailureCopyWithImpl(this._value, this._then);
 
-  final ValueFailure<T> _value;
   // ignore: unused_field
-  final $Res Function(ValueFailure<T>) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ExceedingLengthCopyWith<T, $Res> {
-  factory $ExceedingLengthCopyWith(
-          ExceedingLength<T> value, $Res Function(ExceedingLength<T>) then) =
-      _$ExceedingLengthCopyWithImpl<T, $Res>;
+abstract class _$$ExceedingLengthCopyWith<T, $Res> {
+  factory _$$ExceedingLengthCopyWith(_$ExceedingLength<T> value,
+          $Res Function(_$ExceedingLength<T>) then) =
+      __$$ExceedingLengthCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue, int max});
 }
 
 /// @nodoc
-class _$ExceedingLengthCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ExceedingLengthCopyWith<T, $Res> {
-  _$ExceedingLengthCopyWithImpl(
-      ExceedingLength<T> _value, $Res Function(ExceedingLength<T>) _then)
-      : super(_value, (v) => _then(v as ExceedingLength<T>));
+class __$$ExceedingLengthCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ExceedingLength<T>>
+    implements _$$ExceedingLengthCopyWith<T, $Res> {
+  __$$ExceedingLengthCopyWithImpl(
+      _$ExceedingLength<T> _value, $Res Function(_$ExceedingLength<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ExceedingLength<T> get _value => super._value as ExceedingLength<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
-    Object? max = freezed,
+    Object? max = null,
   }) {
-    return _then(ExceedingLength<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ExceedingLength<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as int,
@@ -325,22 +216,22 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ExceedingLength<T> &&
+            other is _$ExceedingLength<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.max, max));
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(max));
+      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
 
   @JsonKey(ignore: true)
   @override
-  $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
-      _$ExceedingLengthCopyWithImpl<T, ExceedingLength<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
+      __$$ExceedingLengthCopyWithImpl<T, _$ExceedingLength<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -370,22 +261,22 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return exceedingLength?.call(failedValue, max);
   }
@@ -444,22 +335,22 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return exceedingLength?.call(this);
   }
@@ -493,45 +384,46 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
 }
 
 abstract class ExceedingLength<T> implements ValueFailure<T> {
-  const factory ExceedingLength({required T failedValue, required int max}) =
-      _$ExceedingLength<T>;
+  const factory ExceedingLength(
+      {required final T failedValue,
+      required final int max}) = _$ExceedingLength<T>;
 
   T get failedValue;
   int get max;
   @JsonKey(ignore: true)
-  $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
+  _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TooShortCopyWith<T, $Res> {
-  factory $TooShortCopyWith(
-          TooShort<T> value, $Res Function(TooShort<T>) then) =
-      _$TooShortCopyWithImpl<T, $Res>;
+abstract class _$$TooShortCopyWith<T, $Res> {
+  factory _$$TooShortCopyWith(
+          _$TooShort<T> value, $Res Function(_$TooShort<T>) then) =
+      __$$TooShortCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue, int min});
 }
 
 /// @nodoc
-class _$TooShortCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $TooShortCopyWith<T, $Res> {
-  _$TooShortCopyWithImpl(TooShort<T> _value, $Res Function(TooShort<T>) _then)
-      : super(_value, (v) => _then(v as TooShort<T>));
+class __$$TooShortCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$TooShort<T>>
+    implements _$$TooShortCopyWith<T, $Res> {
+  __$$TooShortCopyWithImpl(
+      _$TooShort<T> _value, $Res Function(_$TooShort<T>) _then)
+      : super(_value, _then);
 
-  @override
-  TooShort<T> get _value => super._value as TooShort<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
-    Object? min = freezed,
+    Object? min = null,
   }) {
-    return _then(TooShort<T>(
-      failedValue: failedValue == freezed
+    return _then(_$TooShort<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-      min: min == freezed
+      min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as int,
@@ -558,22 +450,21 @@ class _$TooShort<T> implements TooShort<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is TooShort<T> &&
+            other is _$TooShort<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.min, min));
+            (identical(other.min, min) || other.min == min));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(min));
+      runtimeType, const DeepCollectionEquality().hash(failedValue), min);
 
   @JsonKey(ignore: true)
   @override
-  $TooShortCopyWith<T, TooShort<T>> get copyWith =>
-      _$TooShortCopyWithImpl<T, TooShort<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TooShortCopyWith<T, _$TooShort<T>> get copyWith =>
+      __$$TooShortCopyWithImpl<T, _$TooShort<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -603,22 +494,22 @@ class _$TooShort<T> implements TooShort<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return lengthTooShort?.call(failedValue, min);
   }
@@ -677,22 +568,22 @@ class _$TooShort<T> implements TooShort<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return lengthTooShort?.call(this);
   }
@@ -726,38 +617,38 @@ class _$TooShort<T> implements TooShort<T> {
 }
 
 abstract class TooShort<T> implements ValueFailure<T> {
-  const factory TooShort({required T failedValue, required int min}) =
-      _$TooShort<T>;
+  const factory TooShort(
+      {required final T failedValue, required final int min}) = _$TooShort<T>;
 
   T get failedValue;
   int get min;
   @JsonKey(ignore: true)
-  $TooShortCopyWith<T, TooShort<T>> get copyWith =>
+  _$$TooShortCopyWith<T, _$TooShort<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmptyCopyWith<T, $Res> {
-  factory $EmptyCopyWith(Empty<T> value, $Res Function(Empty<T>) then) =
-      _$EmptyCopyWithImpl<T, $Res>;
+abstract class _$$EmptyCopyWith<T, $Res> {
+  factory _$$EmptyCopyWith(_$Empty<T> value, $Res Function(_$Empty<T>) then) =
+      __$$EmptyCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$EmptyCopyWithImpl<T, $Res> extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $EmptyCopyWith<T, $Res> {
-  _$EmptyCopyWithImpl(Empty<T> _value, $Res Function(Empty<T>) _then)
-      : super(_value, (v) => _then(v as Empty<T>));
+class __$$EmptyCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$Empty<T>>
+    implements _$$EmptyCopyWith<T, $Res> {
+  __$$EmptyCopyWithImpl(_$Empty<T> _value, $Res Function(_$Empty<T>) _then)
+      : super(_value, _then);
 
-  @override
-  Empty<T> get _value => super._value as Empty<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(Empty<T>(
-      failedValue: failedValue == freezed
+    return _then(_$Empty<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -782,7 +673,7 @@ class _$Empty<T> implements Empty<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Empty<T> &&
+            other is _$Empty<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -793,8 +684,9 @@ class _$Empty<T> implements Empty<T> {
 
   @JsonKey(ignore: true)
   @override
-  $EmptyCopyWith<T, Empty<T>> get copyWith =>
-      _$EmptyCopyWithImpl<T, Empty<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
+      __$$EmptyCopyWithImpl<T, _$Empty<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -824,22 +716,22 @@ class _$Empty<T> implements Empty<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return empty?.call(failedValue);
   }
@@ -898,22 +790,22 @@ class _$Empty<T> implements Empty<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return empty?.call(this);
   }
@@ -947,39 +839,38 @@ class _$Empty<T> implements Empty<T> {
 }
 
 abstract class Empty<T> implements ValueFailure<T> {
-  const factory Empty({required T failedValue}) = _$Empty<T>;
+  const factory Empty({required final T failedValue}) = _$Empty<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $EmptyCopyWith<T, Empty<T>> get copyWith =>
+  _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MultilineCopyWith<T, $Res> {
-  factory $MultilineCopyWith(
-          Multiline<T> value, $Res Function(Multiline<T>) then) =
-      _$MultilineCopyWithImpl<T, $Res>;
+abstract class _$$MultilineCopyWith<T, $Res> {
+  factory _$$MultilineCopyWith(
+          _$Multiline<T> value, $Res Function(_$Multiline<T>) then) =
+      __$$MultilineCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$MultilineCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $MultilineCopyWith<T, $Res> {
-  _$MultilineCopyWithImpl(
-      Multiline<T> _value, $Res Function(Multiline<T>) _then)
-      : super(_value, (v) => _then(v as Multiline<T>));
+class __$$MultilineCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$Multiline<T>>
+    implements _$$MultilineCopyWith<T, $Res> {
+  __$$MultilineCopyWithImpl(
+      _$Multiline<T> _value, $Res Function(_$Multiline<T>) _then)
+      : super(_value, _then);
 
-  @override
-  Multiline<T> get _value => super._value as Multiline<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(Multiline<T>(
-      failedValue: failedValue == freezed
+    return _then(_$Multiline<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1004,7 +895,7 @@ class _$Multiline<T> implements Multiline<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Multiline<T> &&
+            other is _$Multiline<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1015,8 +906,9 @@ class _$Multiline<T> implements Multiline<T> {
 
   @JsonKey(ignore: true)
   @override
-  $MultilineCopyWith<T, Multiline<T>> get copyWith =>
-      _$MultilineCopyWithImpl<T, Multiline<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
+      __$$MultilineCopyWithImpl<T, _$Multiline<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1046,22 +938,22 @@ class _$Multiline<T> implements Multiline<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return multiline?.call(failedValue);
   }
@@ -1120,22 +1012,22 @@ class _$Multiline<T> implements Multiline<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return multiline?.call(this);
   }
@@ -1169,44 +1061,43 @@ class _$Multiline<T> implements Multiline<T> {
 }
 
 abstract class Multiline<T> implements ValueFailure<T> {
-  const factory Multiline({required T failedValue}) = _$Multiline<T>;
+  const factory Multiline({required final T failedValue}) = _$Multiline<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $MultilineCopyWith<T, Multiline<T>> get copyWith =>
+  _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListTooLongCopyWith<T, $Res> {
-  factory $ListTooLongCopyWith(
-          ListTooLong<T> value, $Res Function(ListTooLong<T>) then) =
-      _$ListTooLongCopyWithImpl<T, $Res>;
+abstract class _$$ListTooLongCopyWith<T, $Res> {
+  factory _$$ListTooLongCopyWith(
+          _$ListTooLong<T> value, $Res Function(_$ListTooLong<T>) then) =
+      __$$ListTooLongCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue, int max});
 }
 
 /// @nodoc
-class _$ListTooLongCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ListTooLongCopyWith<T, $Res> {
-  _$ListTooLongCopyWithImpl(
-      ListTooLong<T> _value, $Res Function(ListTooLong<T>) _then)
-      : super(_value, (v) => _then(v as ListTooLong<T>));
+class __$$ListTooLongCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ListTooLong<T>>
+    implements _$$ListTooLongCopyWith<T, $Res> {
+  __$$ListTooLongCopyWithImpl(
+      _$ListTooLong<T> _value, $Res Function(_$ListTooLong<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ListTooLong<T> get _value => super._value as ListTooLong<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
-    Object? max = freezed,
+    Object? max = null,
   }) {
-    return _then(ListTooLong<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ListTooLong<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1233,22 +1124,21 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ListTooLong<T> &&
+            other is _$ListTooLong<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.max, max));
+            (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(max));
+      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
 
   @JsonKey(ignore: true)
   @override
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
-      _$ListTooLongCopyWithImpl<T, ListTooLong<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ListTooLongCopyWith<T, _$ListTooLong<T>> get copyWith =>
+      __$$ListTooLongCopyWithImpl<T, _$ListTooLong<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1278,22 +1168,22 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return listTooLong?.call(failedValue, max);
   }
@@ -1352,22 +1242,22 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return listTooLong?.call(this);
   }
@@ -1401,41 +1291,41 @@ class _$ListTooLong<T> implements ListTooLong<T> {
 }
 
 abstract class ListTooLong<T> implements ValueFailure<T> {
-  const factory ListTooLong({required T failedValue, required int max}) =
-      _$ListTooLong<T>;
+  const factory ListTooLong(
+      {required final T failedValue,
+      required final int max}) = _$ListTooLong<T>;
 
   T get failedValue;
   int get max;
   @JsonKey(ignore: true)
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
+  _$$ListTooLongCopyWith<T, _$ListTooLong<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidPhoneCopyWith<T, $Res> {
-  factory $InvalidPhoneCopyWith(
-          InvalidPhone<T> value, $Res Function(InvalidPhone<T>) then) =
-      _$InvalidPhoneCopyWithImpl<T, $Res>;
+abstract class _$$InvalidPhoneCopyWith<T, $Res> {
+  factory _$$InvalidPhoneCopyWith(
+          _$InvalidPhone<T> value, $Res Function(_$InvalidPhone<T>) then) =
+      __$$InvalidPhoneCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidPhoneCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidPhoneCopyWith<T, $Res> {
-  _$InvalidPhoneCopyWithImpl(
-      InvalidPhone<T> _value, $Res Function(InvalidPhone<T>) _then)
-      : super(_value, (v) => _then(v as InvalidPhone<T>));
+class __$$InvalidPhoneCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidPhone<T>>
+    implements _$$InvalidPhoneCopyWith<T, $Res> {
+  __$$InvalidPhoneCopyWithImpl(
+      _$InvalidPhone<T> _value, $Res Function(_$InvalidPhone<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidPhone<T> get _value => super._value as InvalidPhone<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(InvalidPhone<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidPhone<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1460,7 +1350,7 @@ class _$InvalidPhone<T> implements InvalidPhone<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidPhone<T> &&
+            other is _$InvalidPhone<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1471,8 +1361,9 @@ class _$InvalidPhone<T> implements InvalidPhone<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidPhoneCopyWith<T, InvalidPhone<T>> get copyWith =>
-      _$InvalidPhoneCopyWithImpl<T, InvalidPhone<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidPhoneCopyWith<T, _$InvalidPhone<T>> get copyWith =>
+      __$$InvalidPhoneCopyWithImpl<T, _$InvalidPhone<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1502,22 +1393,22 @@ class _$InvalidPhone<T> implements InvalidPhone<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return invalidPhone?.call(failedValue);
   }
@@ -1576,22 +1467,22 @@ class _$InvalidPhone<T> implements InvalidPhone<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return invalidPhone?.call(this);
   }
@@ -1625,39 +1516,39 @@ class _$InvalidPhone<T> implements InvalidPhone<T> {
 }
 
 abstract class InvalidPhone<T> implements ValueFailure<T> {
-  const factory InvalidPhone({required T failedValue}) = _$InvalidPhone<T>;
+  const factory InvalidPhone({required final T failedValue}) =
+      _$InvalidPhone<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $InvalidPhoneCopyWith<T, InvalidPhone<T>> get copyWith =>
+  _$$InvalidPhoneCopyWith<T, _$InvalidPhone<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidEmailCopyWith<T, $Res> {
-  factory $InvalidEmailCopyWith(
-          InvalidEmail<T> value, $Res Function(InvalidEmail<T>) then) =
-      _$InvalidEmailCopyWithImpl<T, $Res>;
+abstract class _$$InvalidEmailCopyWith<T, $Res> {
+  factory _$$InvalidEmailCopyWith(
+          _$InvalidEmail<T> value, $Res Function(_$InvalidEmail<T>) then) =
+      __$$InvalidEmailCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidEmailCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidEmailCopyWith<T, $Res> {
-  _$InvalidEmailCopyWithImpl(
-      InvalidEmail<T> _value, $Res Function(InvalidEmail<T>) _then)
-      : super(_value, (v) => _then(v as InvalidEmail<T>));
+class __$$InvalidEmailCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidEmail<T>>
+    implements _$$InvalidEmailCopyWith<T, $Res> {
+  __$$InvalidEmailCopyWithImpl(
+      _$InvalidEmail<T> _value, $Res Function(_$InvalidEmail<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidEmail<T> get _value => super._value as InvalidEmail<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(InvalidEmail<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidEmail<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1682,7 +1573,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidEmail<T> &&
+            other is _$InvalidEmail<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1693,8 +1584,9 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
-      _$InvalidEmailCopyWithImpl<T, InvalidEmail<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
+      __$$InvalidEmailCopyWithImpl<T, _$InvalidEmail<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1724,22 +1616,22 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return invalidEmail?.call(failedValue);
   }
@@ -1798,22 +1690,22 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1847,39 +1739,39 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 }
 
 abstract class InvalidEmail<T> implements ValueFailure<T> {
-  const factory InvalidEmail({required T failedValue}) = _$InvalidEmail<T>;
+  const factory InvalidEmail({required final T failedValue}) =
+      _$InvalidEmail<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
+  _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UnregisteredPhoneCopyWith<T, $Res> {
-  factory $UnregisteredPhoneCopyWith(UnregisteredPhone<T> value,
-          $Res Function(UnregisteredPhone<T>) then) =
-      _$UnregisteredPhoneCopyWithImpl<T, $Res>;
+abstract class _$$UnregisteredPhoneCopyWith<T, $Res> {
+  factory _$$UnregisteredPhoneCopyWith(_$UnregisteredPhone<T> value,
+          $Res Function(_$UnregisteredPhone<T>) then) =
+      __$$UnregisteredPhoneCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$UnregisteredPhoneCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $UnregisteredPhoneCopyWith<T, $Res> {
-  _$UnregisteredPhoneCopyWithImpl(
-      UnregisteredPhone<T> _value, $Res Function(UnregisteredPhone<T>) _then)
-      : super(_value, (v) => _then(v as UnregisteredPhone<T>));
+class __$$UnregisteredPhoneCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$UnregisteredPhone<T>>
+    implements _$$UnregisteredPhoneCopyWith<T, $Res> {
+  __$$UnregisteredPhoneCopyWithImpl(_$UnregisteredPhone<T> _value,
+      $Res Function(_$UnregisteredPhone<T>) _then)
+      : super(_value, _then);
 
-  @override
-  UnregisteredPhone<T> get _value => super._value as UnregisteredPhone<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(UnregisteredPhone<T>(
-      failedValue: failedValue == freezed
+    return _then(_$UnregisteredPhone<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -1904,7 +1796,7 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UnregisteredPhone<T> &&
+            other is _$UnregisteredPhone<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -1915,8 +1807,9 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
 
   @JsonKey(ignore: true)
   @override
-  $UnregisteredPhoneCopyWith<T, UnregisteredPhone<T>> get copyWith =>
-      _$UnregisteredPhoneCopyWithImpl<T, UnregisteredPhone<T>>(
+  @pragma('vm:prefer-inline')
+  _$$UnregisteredPhoneCopyWith<T, _$UnregisteredPhone<T>> get copyWith =>
+      __$$UnregisteredPhoneCopyWithImpl<T, _$UnregisteredPhone<T>>(
           this, _$identity);
 
   @override
@@ -1947,22 +1840,22 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return unregisteredPhone?.call(failedValue);
   }
@@ -2021,22 +1914,22 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return unregisteredPhone?.call(this);
   }
@@ -2070,40 +1963,39 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
 }
 
 abstract class UnregisteredPhone<T> implements ValueFailure<T> {
-  const factory UnregisteredPhone({required T failedValue}) =
+  const factory UnregisteredPhone({required final T failedValue}) =
       _$UnregisteredPhone<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $UnregisteredPhoneCopyWith<T, UnregisteredPhone<T>> get copyWith =>
+  _$$UnregisteredPhoneCopyWith<T, _$UnregisteredPhone<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidObjectCopyWith<T, $Res> {
-  factory $InvalidObjectCopyWith(
-          InvalidObject<T> value, $Res Function(InvalidObject<T>) then) =
-      _$InvalidObjectCopyWithImpl<T, $Res>;
+abstract class _$$InvalidObjectCopyWith<T, $Res> {
+  factory _$$InvalidObjectCopyWith(
+          _$InvalidObject<T> value, $Res Function(_$InvalidObject<T>) then) =
+      __$$InvalidObjectCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidObjectCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidObjectCopyWith<T, $Res> {
-  _$InvalidObjectCopyWithImpl(
-      InvalidObject<T> _value, $Res Function(InvalidObject<T>) _then)
-      : super(_value, (v) => _then(v as InvalidObject<T>));
+class __$$InvalidObjectCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidObject<T>>
+    implements _$$InvalidObjectCopyWith<T, $Res> {
+  __$$InvalidObjectCopyWithImpl(
+      _$InvalidObject<T> _value, $Res Function(_$InvalidObject<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidObject<T> get _value => super._value as InvalidObject<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(InvalidObject<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidObject<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -2128,7 +2020,7 @@ class _$InvalidObject<T> implements InvalidObject<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidObject<T> &&
+            other is _$InvalidObject<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -2139,8 +2031,9 @@ class _$InvalidObject<T> implements InvalidObject<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidObjectCopyWith<T, InvalidObject<T>> get copyWith =>
-      _$InvalidObjectCopyWithImpl<T, InvalidObject<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidObjectCopyWith<T, _$InvalidObject<T>> get copyWith =>
+      __$$InvalidObjectCopyWithImpl<T, _$InvalidObject<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2170,22 +2063,22 @@ class _$InvalidObject<T> implements InvalidObject<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return invalidObject?.call(failedValue);
   }
@@ -2244,22 +2137,22 @@ class _$InvalidObject<T> implements InvalidObject<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return invalidObject?.call(this);
   }
@@ -2293,31 +2186,29 @@ class _$InvalidObject<T> implements InvalidObject<T> {
 }
 
 abstract class InvalidObject<T> implements ValueFailure<T> {
-  const factory InvalidObject({required T failedValue}) = _$InvalidObject<T>;
+  const factory InvalidObject({required final T failedValue}) =
+      _$InvalidObject<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $InvalidObjectCopyWith<T, InvalidObject<T>> get copyWith =>
+  _$$InvalidObjectCopyWith<T, _$InvalidObject<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmptyObjectCopyWith<T, $Res> {
-  factory $EmptyObjectCopyWith(
-          EmptyObject<T> value, $Res Function(EmptyObject<T>) then) =
-      _$EmptyObjectCopyWithImpl<T, $Res>;
+abstract class _$$EmptyObjectCopyWith<T, $Res> {
+  factory _$$EmptyObjectCopyWith(
+          _$EmptyObject<T> value, $Res Function(_$EmptyObject<T>) then) =
+      __$$EmptyObjectCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$EmptyObjectCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $EmptyObjectCopyWith<T, $Res> {
-  _$EmptyObjectCopyWithImpl(
-      EmptyObject<T> _value, $Res Function(EmptyObject<T>) _then)
-      : super(_value, (v) => _then(v as EmptyObject<T>));
-
-  @override
-  EmptyObject<T> get _value => super._value as EmptyObject<T>;
+class __$$EmptyObjectCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$EmptyObject<T>>
+    implements _$$EmptyObjectCopyWith<T, $Res> {
+  __$$EmptyObjectCopyWithImpl(
+      _$EmptyObject<T> _value, $Res Function(_$EmptyObject<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2333,7 +2224,7 @@ class _$EmptyObject<T> implements EmptyObject<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is EmptyObject<T>);
+        (other.runtimeType == runtimeType && other is _$EmptyObject<T>);
   }
 
   @override
@@ -2367,22 +2258,22 @@ class _$EmptyObject<T> implements EmptyObject<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return emptyObject?.call();
   }
@@ -2441,22 +2332,22 @@ class _$EmptyObject<T> implements EmptyObject<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return emptyObject?.call(this);
   }
@@ -2494,30 +2385,29 @@ abstract class EmptyObject<T> implements ValueFailure<T> {
 }
 
 /// @nodoc
-abstract class $ShortTokenCopyWith<T, $Res> {
-  factory $ShortTokenCopyWith(
-          ShortToken<T> value, $Res Function(ShortToken<T>) then) =
-      _$ShortTokenCopyWithImpl<T, $Res>;
+abstract class _$$ShortTokenCopyWith<T, $Res> {
+  factory _$$ShortTokenCopyWith(
+          _$ShortToken<T> value, $Res Function(_$ShortToken<T>) then) =
+      __$$ShortTokenCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$ShortTokenCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ShortTokenCopyWith<T, $Res> {
-  _$ShortTokenCopyWithImpl(
-      ShortToken<T> _value, $Res Function(ShortToken<T>) _then)
-      : super(_value, (v) => _then(v as ShortToken<T>));
+class __$$ShortTokenCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ShortToken<T>>
+    implements _$$ShortTokenCopyWith<T, $Res> {
+  __$$ShortTokenCopyWithImpl(
+      _$ShortToken<T> _value, $Res Function(_$ShortToken<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ShortToken<T> get _value => super._value as ShortToken<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(ShortToken<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ShortToken<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -2542,7 +2432,7 @@ class _$ShortToken<T> implements ShortToken<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ShortToken<T> &&
+            other is _$ShortToken<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -2553,8 +2443,9 @@ class _$ShortToken<T> implements ShortToken<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ShortTokenCopyWith<T, ShortToken<T>> get copyWith =>
-      _$ShortTokenCopyWithImpl<T, ShortToken<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ShortTokenCopyWith<T, _$ShortToken<T>> get copyWith =>
+      __$$ShortTokenCopyWithImpl<T, _$ShortToken<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2584,22 +2475,22 @@ class _$ShortToken<T> implements ShortToken<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return shortToken?.call(failedValue);
   }
@@ -2658,22 +2549,22 @@ class _$ShortToken<T> implements ShortToken<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return shortToken?.call(this);
   }
@@ -2707,44 +2598,43 @@ class _$ShortToken<T> implements ShortToken<T> {
 }
 
 abstract class ShortToken<T> implements ValueFailure<T> {
-  const factory ShortToken({required T failedValue}) = _$ShortToken<T>;
+  const factory ShortToken({required final T failedValue}) = _$ShortToken<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $ShortTokenCopyWith<T, ShortToken<T>> get copyWith =>
+  _$$ShortTokenCopyWith<T, _$ShortToken<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ExceedBalanceCopyWith<T, $Res> {
-  factory $ExceedBalanceCopyWith(
-          ExceedBalance<T> value, $Res Function(ExceedBalance<T>) then) =
-      _$ExceedBalanceCopyWithImpl<T, $Res>;
+abstract class _$$ExceedBalanceCopyWith<T, $Res> {
+  factory _$$ExceedBalanceCopyWith(
+          _$ExceedBalance<T> value, $Res Function(_$ExceedBalance<T>) then) =
+      __$$ExceedBalanceCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({double failedValue, double maxBalance});
 }
 
 /// @nodoc
-class _$ExceedBalanceCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ExceedBalanceCopyWith<T, $Res> {
-  _$ExceedBalanceCopyWithImpl(
-      ExceedBalance<T> _value, $Res Function(ExceedBalance<T>) _then)
-      : super(_value, (v) => _then(v as ExceedBalance<T>));
+class __$$ExceedBalanceCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ExceedBalance<T>>
+    implements _$$ExceedBalanceCopyWith<T, $Res> {
+  __$$ExceedBalanceCopyWithImpl(
+      _$ExceedBalance<T> _value, $Res Function(_$ExceedBalance<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ExceedBalance<T> get _value => super._value as ExceedBalance<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
-    Object? maxBalance = freezed,
+    Object? failedValue = null,
+    Object? maxBalance = null,
   }) {
-    return _then(ExceedBalance<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ExceedBalance<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as double,
-      maxBalance: maxBalance == freezed
+      maxBalance: null == maxBalance
           ? _value.maxBalance
           : maxBalance // ignore: cast_nullable_to_non_nullable
               as double,
@@ -2771,23 +2661,21 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ExceedBalance<T> &&
-            const DeepCollectionEquality()
-                .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality()
-                .equals(other.maxBalance, maxBalance));
+            other is _$ExceedBalance<T> &&
+            (identical(other.failedValue, failedValue) ||
+                other.failedValue == failedValue) &&
+            (identical(other.maxBalance, maxBalance) ||
+                other.maxBalance == maxBalance));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(maxBalance));
+  int get hashCode => Object.hash(runtimeType, failedValue, maxBalance);
 
   @JsonKey(ignore: true)
   @override
-  $ExceedBalanceCopyWith<T, ExceedBalance<T>> get copyWith =>
-      _$ExceedBalanceCopyWithImpl<T, ExceedBalance<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExceedBalanceCopyWith<T, _$ExceedBalance<T>> get copyWith =>
+      __$$ExceedBalanceCopyWithImpl<T, _$ExceedBalance<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2817,22 +2705,22 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return exceedingBalance?.call(failedValue, maxBalance);
   }
@@ -2891,22 +2779,22 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return exceedingBalance?.call(this);
   }
@@ -2941,46 +2829,45 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
 
 abstract class ExceedBalance<T> implements ValueFailure<T> {
   const factory ExceedBalance(
-      {required double failedValue,
-      required double maxBalance}) = _$ExceedBalance<T>;
+      {required final double failedValue,
+      required final double maxBalance}) = _$ExceedBalance<T>;
 
   double get failedValue;
   double get maxBalance;
   @JsonKey(ignore: true)
-  $ExceedBalanceCopyWith<T, ExceedBalance<T>> get copyWith =>
+  _$$ExceedBalanceCopyWith<T, _$ExceedBalance<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidDateTimeCopyWith<T, $Res> {
-  factory $InvalidDateTimeCopyWith(
-          InvalidDateTime<T> value, $Res Function(InvalidDateTime<T>) then) =
-      _$InvalidDateTimeCopyWithImpl<T, $Res>;
+abstract class _$$InvalidDateTimeCopyWith<T, $Res> {
+  factory _$$InvalidDateTimeCopyWith(_$InvalidDateTime<T> value,
+          $Res Function(_$InvalidDateTime<T>) then) =
+      __$$InvalidDateTimeCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({DateTime failedValue, String pattern});
 }
 
 /// @nodoc
-class _$InvalidDateTimeCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidDateTimeCopyWith<T, $Res> {
-  _$InvalidDateTimeCopyWithImpl(
-      InvalidDateTime<T> _value, $Res Function(InvalidDateTime<T>) _then)
-      : super(_value, (v) => _then(v as InvalidDateTime<T>));
+class __$$InvalidDateTimeCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidDateTime<T>>
+    implements _$$InvalidDateTimeCopyWith<T, $Res> {
+  __$$InvalidDateTimeCopyWithImpl(
+      _$InvalidDateTime<T> _value, $Res Function(_$InvalidDateTime<T>) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidDateTime<T> get _value => super._value as InvalidDateTime<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failedValue = freezed,
-    Object? pattern = freezed,
+    Object? failedValue = null,
+    Object? pattern = null,
   }) {
-    return _then(InvalidDateTime<T>(
-      failedValue: failedValue == freezed
+    return _then(_$InvalidDateTime<T>(
+      failedValue: null == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      pattern: pattern == freezed
+      pattern: null == pattern
           ? _value.pattern
           : pattern // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3007,22 +2894,21 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidDateTime<T> &&
-            const DeepCollectionEquality()
-                .equals(other.failedValue, failedValue) &&
-            const DeepCollectionEquality().equals(other.pattern, pattern));
+            other is _$InvalidDateTime<T> &&
+            (identical(other.failedValue, failedValue) ||
+                other.failedValue == failedValue) &&
+            (identical(other.pattern, pattern) || other.pattern == pattern));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(failedValue),
-      const DeepCollectionEquality().hash(pattern));
+  int get hashCode => Object.hash(runtimeType, failedValue, pattern);
 
   @JsonKey(ignore: true)
   @override
-  $InvalidDateTimeCopyWith<T, InvalidDateTime<T>> get copyWith =>
-      _$InvalidDateTimeCopyWithImpl<T, InvalidDateTime<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidDateTimeCopyWith<T, _$InvalidDateTime<T>> get copyWith =>
+      __$$InvalidDateTimeCopyWithImpl<T, _$InvalidDateTime<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3052,22 +2938,22 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return invalidDateTime?.call(failedValue, pattern);
   }
@@ -3126,22 +3012,22 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return invalidDateTime?.call(this);
   }
@@ -3176,41 +3062,40 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
 
 abstract class InvalidDateTime<T> implements ValueFailure<T> {
   const factory InvalidDateTime(
-      {required DateTime failedValue,
-      required String pattern}) = _$InvalidDateTime<T>;
+      {required final DateTime failedValue,
+      required final String pattern}) = _$InvalidDateTime<T>;
 
   DateTime get failedValue;
   String get pattern;
   @JsonKey(ignore: true)
-  $InvalidDateTimeCopyWith<T, InvalidDateTime<T>> get copyWith =>
+  _$$InvalidDateTimeCopyWith<T, _$InvalidDateTime<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NoteExceedCopyWith<T, $Res> {
-  factory $NoteExceedCopyWith(
-          NoteExceed<T> value, $Res Function(NoteExceed<T>) then) =
-      _$NoteExceedCopyWithImpl<T, $Res>;
+abstract class _$$NoteExceedCopyWith<T, $Res> {
+  factory _$$NoteExceedCopyWith(
+          _$NoteExceed<T> value, $Res Function(_$NoteExceed<T>) then) =
+      __$$NoteExceedCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$NoteExceedCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $NoteExceedCopyWith<T, $Res> {
-  _$NoteExceedCopyWithImpl(
-      NoteExceed<T> _value, $Res Function(NoteExceed<T>) _then)
-      : super(_value, (v) => _then(v as NoteExceed<T>));
+class __$$NoteExceedCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$NoteExceed<T>>
+    implements _$$NoteExceedCopyWith<T, $Res> {
+  __$$NoteExceedCopyWithImpl(
+      _$NoteExceed<T> _value, $Res Function(_$NoteExceed<T>) _then)
+      : super(_value, _then);
 
-  @override
-  NoteExceed<T> get _value => super._value as NoteExceed<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(NoteExceed<T>(
-      failedValue: failedValue == freezed
+    return _then(_$NoteExceed<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -3235,7 +3120,7 @@ class _$NoteExceed<T> implements NoteExceed<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is NoteExceed<T> &&
+            other is _$NoteExceed<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -3246,8 +3131,9 @@ class _$NoteExceed<T> implements NoteExceed<T> {
 
   @JsonKey(ignore: true)
   @override
-  $NoteExceedCopyWith<T, NoteExceed<T>> get copyWith =>
-      _$NoteExceedCopyWithImpl<T, NoteExceed<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$NoteExceedCopyWith<T, _$NoteExceed<T>> get copyWith =>
+      __$$NoteExceedCopyWithImpl<T, _$NoteExceed<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3277,22 +3163,22 @@ class _$NoteExceed<T> implements NoteExceed<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return noteExceed?.call(failedValue);
   }
@@ -3351,22 +3237,22 @@ class _$NoteExceed<T> implements NoteExceed<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return noteExceed?.call(this);
   }
@@ -3400,39 +3286,38 @@ class _$NoteExceed<T> implements NoteExceed<T> {
 }
 
 abstract class NoteExceed<T> implements ValueFailure<T> {
-  const factory NoteExceed({required T failedValue}) = _$NoteExceed<T>;
+  const factory NoteExceed({required final T failedValue}) = _$NoteExceed<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $NoteExceedCopyWith<T, NoteExceed<T>> get copyWith =>
+  _$$NoteExceedCopyWith<T, _$NoteExceed<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ConfirmationNotMatchCopyWith<T, $Res> {
-  factory $ConfirmationNotMatchCopyWith(ConfirmationNotMatch<T> value,
-          $Res Function(ConfirmationNotMatch<T>) then) =
-      _$ConfirmationNotMatchCopyWithImpl<T, $Res>;
+abstract class _$$ConfirmationNotMatchCopyWith<T, $Res> {
+  factory _$$ConfirmationNotMatchCopyWith(_$ConfirmationNotMatch<T> value,
+          $Res Function(_$ConfirmationNotMatch<T>) then) =
+      __$$ConfirmationNotMatchCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$ConfirmationNotMatchCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ConfirmationNotMatchCopyWith<T, $Res> {
-  _$ConfirmationNotMatchCopyWithImpl(ConfirmationNotMatch<T> _value,
-      $Res Function(ConfirmationNotMatch<T>) _then)
-      : super(_value, (v) => _then(v as ConfirmationNotMatch<T>));
+class __$$ConfirmationNotMatchCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$ConfirmationNotMatch<T>>
+    implements _$$ConfirmationNotMatchCopyWith<T, $Res> {
+  __$$ConfirmationNotMatchCopyWithImpl(_$ConfirmationNotMatch<T> _value,
+      $Res Function(_$ConfirmationNotMatch<T>) _then)
+      : super(_value, _then);
 
-  @override
-  ConfirmationNotMatch<T> get _value => super._value as ConfirmationNotMatch<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(ConfirmationNotMatch<T>(
-      failedValue: failedValue == freezed
+    return _then(_$ConfirmationNotMatch<T>(
+      failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
               as T,
@@ -3457,7 +3342,7 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ConfirmationNotMatch<T> &&
+            other is _$ConfirmationNotMatch<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -3468,8 +3353,9 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ConfirmationNotMatchCopyWith<T, ConfirmationNotMatch<T>> get copyWith =>
-      _$ConfirmationNotMatchCopyWithImpl<T, ConfirmationNotMatch<T>>(
+  @pragma('vm:prefer-inline')
+  _$$ConfirmationNotMatchCopyWith<T, _$ConfirmationNotMatch<T>> get copyWith =>
+      __$$ConfirmationNotMatchCopyWithImpl<T, _$ConfirmationNotMatch<T>>(
           this, _$identity);
 
   @override
@@ -3500,22 +3386,22 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return confirmationNotMatch?.call(failedValue);
   }
@@ -3574,22 +3460,22 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return confirmationNotMatch?.call(this);
   }
@@ -3623,40 +3509,39 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
 }
 
 abstract class ConfirmationNotMatch<T> implements ValueFailure<T> {
-  const factory ConfirmationNotMatch({required T failedValue}) =
+  const factory ConfirmationNotMatch({required final T failedValue}) =
       _$ConfirmationNotMatch<T>;
 
   T get failedValue;
   @JsonKey(ignore: true)
-  $ConfirmationNotMatchCopyWith<T, ConfirmationNotMatch<T>> get copyWith =>
+  _$$ConfirmationNotMatchCopyWith<T, _$ConfirmationNotMatch<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$SearchNotFoundCopyWith<T, $Res> {
-  factory _$SearchNotFoundCopyWith(
-          _SearchNotFound<T> value, $Res Function(_SearchNotFound<T>) then) =
-      __$SearchNotFoundCopyWithImpl<T, $Res>;
+abstract class _$$_SearchNotFoundCopyWith<T, $Res> {
+  factory _$$_SearchNotFoundCopyWith(_$_SearchNotFound<T> value,
+          $Res Function(_$_SearchNotFound<T>) then) =
+      __$$_SearchNotFoundCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({String keyword});
 }
 
 /// @nodoc
-class __$SearchNotFoundCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements _$SearchNotFoundCopyWith<T, $Res> {
-  __$SearchNotFoundCopyWithImpl(
-      _SearchNotFound<T> _value, $Res Function(_SearchNotFound<T>) _then)
-      : super(_value, (v) => _then(v as _SearchNotFound<T>));
+class __$$_SearchNotFoundCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$_SearchNotFound<T>>
+    implements _$$_SearchNotFoundCopyWith<T, $Res> {
+  __$$_SearchNotFoundCopyWithImpl(
+      _$_SearchNotFound<T> _value, $Res Function(_$_SearchNotFound<T>) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchNotFound<T> get _value => super._value as _SearchNotFound<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? keyword = freezed,
+    Object? keyword = null,
   }) {
-    return _then(_SearchNotFound<T>(
-      keyword: keyword == freezed
+    return _then(_$_SearchNotFound<T>(
+      keyword: null == keyword
           ? _value.keyword
           : keyword // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3681,18 +3566,19 @@ class _$_SearchNotFound<T> implements _SearchNotFound<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SearchNotFound<T> &&
-            const DeepCollectionEquality().equals(other.keyword, keyword));
+            other is _$_SearchNotFound<T> &&
+            (identical(other.keyword, keyword) || other.keyword == keyword));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(keyword));
+  int get hashCode => Object.hash(runtimeType, keyword);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchNotFoundCopyWith<T, _SearchNotFound<T>> get copyWith =>
-      __$SearchNotFoundCopyWithImpl<T, _SearchNotFound<T>>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SearchNotFoundCopyWith<T, _$_SearchNotFound<T>> get copyWith =>
+      __$$_SearchNotFoundCopyWithImpl<T, _$_SearchNotFound<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3722,22 +3608,22 @@ class _$_SearchNotFound<T> implements _SearchNotFound<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T failedValue, int max)? exceedingLength,
-    TResult Function(T failedValue, int min)? lengthTooShort,
-    TResult Function(T failedValue)? empty,
-    TResult Function(T failedValue)? multiline,
-    TResult Function(T failedValue, int max)? listTooLong,
-    TResult Function(T failedValue)? invalidPhone,
-    TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? unregisteredPhone,
-    TResult Function(T failedValue)? invalidObject,
-    TResult Function()? emptyObject,
-    TResult Function(T failedValue)? shortToken,
-    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
-    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
-    TResult Function(T failedValue)? noteExceed,
-    TResult Function(T failedValue)? confirmationNotMatch,
-    TResult Function(String keyword)? searchNotFound,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue, int min)? lengthTooShort,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue, int max)? listTooLong,
+    TResult? Function(T failedValue)? invalidPhone,
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? unregisteredPhone,
+    TResult? Function(T failedValue)? invalidObject,
+    TResult? Function()? emptyObject,
+    TResult? Function(T failedValue)? shortToken,
+    TResult? Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult? Function(DateTime failedValue, String pattern)? invalidDateTime,
+    TResult? Function(T failedValue)? noteExceed,
+    TResult? Function(T failedValue)? confirmationNotMatch,
+    TResult? Function(String keyword)? searchNotFound,
   }) {
     return searchNotFound?.call(keyword);
   }
@@ -3796,22 +3682,22 @@ class _$_SearchNotFound<T> implements _SearchNotFound<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ExceedingLength<T> value)? exceedingLength,
-    TResult Function(TooShort<T> value)? lengthTooShort,
-    TResult Function(Empty<T> value)? empty,
-    TResult Function(Multiline<T> value)? multiline,
-    TResult Function(ListTooLong<T> value)? listTooLong,
-    TResult Function(InvalidPhone<T> value)? invalidPhone,
-    TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
-    TResult Function(InvalidObject<T> value)? invalidObject,
-    TResult Function(EmptyObject<T> value)? emptyObject,
-    TResult Function(ShortToken<T> value)? shortToken,
-    TResult Function(ExceedBalance<T> value)? exceedingBalance,
-    TResult Function(InvalidDateTime<T> value)? invalidDateTime,
-    TResult Function(NoteExceed<T> value)? noteExceed,
-    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
-    TResult Function(_SearchNotFound<T> value)? searchNotFound,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(TooShort<T> value)? lengthTooShort,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(ListTooLong<T> value)? listTooLong,
+    TResult? Function(InvalidPhone<T> value)? invalidPhone,
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult? Function(InvalidObject<T> value)? invalidObject,
+    TResult? Function(EmptyObject<T> value)? emptyObject,
+    TResult? Function(ShortToken<T> value)? shortToken,
+    TResult? Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult? Function(InvalidDateTime<T> value)? invalidDateTime,
+    TResult? Function(NoteExceed<T> value)? noteExceed,
+    TResult? Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+    TResult? Function(_SearchNotFound<T> value)? searchNotFound,
   }) {
     return searchNotFound?.call(this);
   }
@@ -3845,11 +3731,11 @@ class _$_SearchNotFound<T> implements _SearchNotFound<T> {
 }
 
 abstract class _SearchNotFound<T> implements ValueFailure<T> {
-  const factory _SearchNotFound({required String keyword}) =
+  const factory _SearchNotFound({required final String keyword}) =
       _$_SearchNotFound<T>;
 
   String get keyword;
   @JsonKey(ignore: true)
-  _$SearchNotFoundCopyWith<T, _SearchNotFound<T>> get copyWith =>
+  _$$_SearchNotFoundCopyWith<T, _$_SearchNotFound<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

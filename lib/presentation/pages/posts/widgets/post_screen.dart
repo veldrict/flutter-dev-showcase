@@ -18,6 +18,7 @@ class PostPage extends StatelessWidget {
     return BlocConsumer<PostsBloc, PostsState>(
       listener: (BuildContext context, PostsState state) {
         state.optionFailureOrSuccess.match(
+          () => null,
           (a) => a.fold(
             (l) {
               l.map(
@@ -43,7 +44,6 @@ class PostPage extends StatelessWidget {
             },
             (r) => null,
           ),
-          () => null,
         );
       },
       builder: (BuildContext context, PostsState state) {
@@ -63,6 +63,51 @@ class PostPage extends StatelessWidget {
                 ),
                 Expanded(
                   child: state.optionFailureOrSuccess.match(
+                    () => ListView.builder(
+                        itemBuilder: (context, index) {
+                          return Card(
+                            elevation: 3,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            margin: const EdgeInsets.all(5),
+                            child: Container(
+                              padding: const EdgeInsets.all(15),
+                              height: 200,
+                              child: Shimmer.fromColors(
+                                baseColor: Colors.grey.shade300,
+                                highlightColor: Colors.grey.shade100,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      flex: 1,
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 8.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    const Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(vertical: 2.0),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 8.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                        itemCount: 10),
                     (options) => options.fold(
                         (l) => const Center(
                               child: Text('No Data'),
@@ -121,51 +166,6 @@ class PostPage extends StatelessWidget {
                                 },
                               ),
                             )),
-                    () => ListView.builder(
-                        itemBuilder: (context, index) {
-                          return Card(
-                            elevation: 3,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            margin: const EdgeInsets.all(5),
-                            child: Container(
-                              padding: const EdgeInsets.all(15),
-                              height: 200,
-                              child: Shimmer.fromColors(
-                                baseColor: Colors.grey.shade300,
-                                highlightColor: Colors.grey.shade100,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      flex: 1,
-                                      child: Container(
-                                        width: double.infinity,
-                                        height: 8.0,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(vertical: 2.0),
-                                    ),
-                                    Expanded(
-                                      flex: 2,
-                                      child: Container(
-                                        width: double.infinity,
-                                        height: 8.0,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        },
-                        itemCount: 10),
                   ),
                 ),
               ],

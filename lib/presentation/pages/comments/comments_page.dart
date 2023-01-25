@@ -84,9 +84,9 @@ class CommentsPage extends HookWidget {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10)),
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  margin: EdgeInsets.all(5),
+                                  margin: const EdgeInsets.all(5),
                                   child: Container(
-                                    padding: EdgeInsets.all(15),
+                                    padding: const EdgeInsets.all(15),
                                     height: 200,
                                     child: Shimmer.fromColors(
                                       baseColor: Colors.grey.shade300,
@@ -126,9 +126,12 @@ class CommentsPage extends HookWidget {
                               itemCount: 10),
                           loaded: (s) {
                             return s.optionFailedOrSuccess.match(
+                              () => const Center(
+                                child: Text('No Data'),
+                              ),
                               (options) => options.fold(
-                                (l) => Center(
-                                  child: Text("No Data"),
+                                (l) => const Center(
+                                  child: Text('No Data'),
                                 ),
                                 (items) => ListView.builder(
                                   itemCount: items.length,
@@ -139,9 +142,9 @@ class CommentsPage extends HookWidget {
                                           borderRadius:
                                               BorderRadius.circular(10)),
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      margin: EdgeInsets.all(5),
+                                      margin: const EdgeInsets.all(5),
                                       child: Container(
-                                        padding: EdgeInsets.all(15),
+                                        padding: const EdgeInsets.all(15),
                                         height: 200,
                                         child: Column(
                                           crossAxisAlignment:
@@ -170,9 +173,6 @@ class CommentsPage extends HookWidget {
                                     );
                                   },
                                 ),
-                              ),
-                              () => Center(
-                                child: Text("No Data"),
                               ),
                             );
                           },
