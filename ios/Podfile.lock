@@ -1,16 +1,19 @@
 PODS:
-  - awesome_notifications (0.0.3):
+  - awesome_notifications (0.0.5):
     - Flutter
+    - IosAwnCore (= 0.7.3)
   - better_player (0.0.1):
     - Cache (~> 6.0.0)
     - Flutter
+    - GCDWebServer
     - HLSCachingReverseProxyServer
+    - PINCache
   - Cache (6.0.0)
   - connectivity_plus (0.0.1):
     - Flutter
     - ReachabilitySwift
   - Flutter (1.0.0)
-  - flutter_secure_storage (3.3.1):
+  - flutter_secure_storage (6.0.0):
     - Flutter
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -21,6 +24,7 @@ PODS:
   - HLSCachingReverseProxyServer (0.1.0):
     - GCDWebServer (~> 3.5)
     - PINCache (>= 3.0.1-beta.3)
+  - IosAwnCore (0.7.3)
   - package_info_plus (0.4.5):
     - Flutter
   - path_provider_ios (0.0.1):
@@ -60,6 +64,7 @@ SPEC REPOS:
     - FMDB
     - GCDWebServer
     - HLSCachingReverseProxyServer
+    - IosAwnCore
     - PINCache
     - PINOperation
     - ReachabilitySwift
@@ -87,17 +92,18 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/wakelock/ios"
 
 SPEC CHECKSUMS:
-  awesome_notifications: 04530aafec8dac4635244ed4b4072f4aea6cc938
-  better_player: 5f77b030c433bd39af0aaaffc184cf4267601a84
+  awesome_notifications: d63d9a25f126860f9a600850d99772237895b3ba
+  better_player: 2406bfe8175203c7a46fa15f9d778d73b12e1646
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
-  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
-  flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_secure_storage: 23fc622d89d073675f2eaa109381aefbcf5a49be
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   HLSCachingReverseProxyServer: 59935e1e0244ad7f3375d75b5ef46e8eb26ab181
+  IosAwnCore: 6494e0e174d49f04f513e8a002187be226889a37
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
-  path_provider_ios: 7d7ce634493af4477d156294792024ec3485acd5
+  path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
@@ -107,4 +113,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 858ac55f0d3e00fba8cb5a3f916da1fc0b304c07
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

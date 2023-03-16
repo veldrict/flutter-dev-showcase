@@ -17,7 +17,7 @@ class _$AppRouters extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    PostWrapperRoute.name: (routeData) {
+    PostRouter.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const PostWrapperPage(),
@@ -50,23 +50,23 @@ class _$AppRouters extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
-          PostWrapperRoute.name,
+          PostRouter.name,
           path: '/',
           children: [
             RouteConfig(
               PostRoute.name,
               path: '',
-              parent: PostWrapperRoute.name,
+              parent: PostRouter.name,
             ),
             RouteConfig(
               TestingRoute.name,
               path: 'testing',
-              parent: PostWrapperRoute.name,
+              parent: PostRouter.name,
             ),
             RouteConfig(
               '*#redirect',
               path: '*',
-              parent: PostWrapperRoute.name,
+              parent: PostRouter.name,
               redirectTo: '',
               fullMatch: true,
             ),
@@ -81,15 +81,15 @@ class _$AppRouters extends RootStackRouter {
 
 /// generated route for
 /// [PostWrapperPage]
-class PostWrapperRoute extends PageRouteInfo<void> {
-  const PostWrapperRoute({List<PageRouteInfo>? children})
+class PostRouter extends PageRouteInfo<void> {
+  const PostRouter({List<PageRouteInfo>? children})
       : super(
-          PostWrapperRoute.name,
+          PostRouter.name,
           path: '/',
           initialChildren: children,
         );
 
-  static const String name = 'PostWrapperRoute';
+  static const String name = 'PostRouter';
 }
 
 /// generated route for

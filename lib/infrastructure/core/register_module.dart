@@ -1,10 +1,15 @@
 // import 'package:code_id_alice/code_id_alice.dart';
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:code_id_network/code_id_network.dart';
 import 'package:code_id_storage/code_id_storage.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_dev_showcase/domain/core/common_util.dart';
 import 'package:flutter_dev_showcase/presentation/routers/app_routers.dart';
 
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
+import 'package:code_id_alice/alice.dart';
 
 @module
 abstract class RegisterModule {
@@ -17,26 +22,29 @@ abstract class RegisterModule {
   @lazySingleton
   AppRouters get appRouter => AppRouters();
 
-  // @lazySingleton
-  // Alice alice(AppRouters appRouters) => Alice(
-  //       navigatorKey: appRouters.navigatorKey,
-  //     );
+  @injectable
+  Key get key => Key(appRouter.current.name);
+
+  @lazySingleton
+  Alice alice(AppRouters appRouters) => Alice(
+        navigatorKey: appRouters.navigatorKey,
+      );
 
   @preResolve
   @lazySingleton
   Future<INetworkService> network(
     @Named('baseUrl') String baseUrl,
-    // Alice alice,
+    Alice alice,
   ) async {
-    IStorage _storage = Storage;
-    await _storage.openBox('authKey');
-    final _client = NetworkService(
+    IStorage storage = Storage;
+    await storage.openBox('authKey');
+    final client = NetworkService(
       baseUrl: baseUrl,
     );
 
-    _client.addInterceptors([
+    client.addInterceptors([
       AuthInterceptor(
-        storage: _storage,
+        storage: storage,
         authKey: 'sessionId',
         authHeadersBuilder: (token) {
           return {'Authorization': '$token'};
@@ -48,9 +56,9 @@ abstract class RegisterModule {
           requestHeader: true,
           responseBody: true,
           responseHeader: true),
-      // alice.getDioInterceptor(),
+      alice.getDioInterceptor(),
     ]);
 
-    return _client;
+    return client;
   }
 }

@@ -14,6 +14,7 @@ part 'app_routers.gr.dart';
   routes: <AutoRoute>[
     AutoRoute(
       path: Routers.main,
+      name: 'PostRouter',
       page: PostWrapperPage,
       initial: true,
       children: [

@@ -20,6 +20,7 @@ CommentItem _$CommentItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentItem {
+  @JsonKey(name: 'post_id')
   int get postId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   int get ids => throw _privateConstructorUsedError;
@@ -40,7 +41,7 @@ abstract class $CommentItemCopyWith<$Res> {
       _$CommentItemCopyWithImpl<$Res, CommentItem>;
   @useResult
   $Res call(
-      {int postId,
+      {@JsonKey(name: 'post_id') int postId,
       @JsonKey(name: 'id') int ids,
       String name,
       String email,
@@ -100,7 +101,7 @@ abstract class _$$_CommentItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int postId,
+      {@JsonKey(name: 'post_id') int postId,
       @JsonKey(name: 'id') int ids,
       String name,
       String email,
@@ -153,7 +154,7 @@ class __$$_CommentItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CommentItem implements _CommentItem {
   const _$_CommentItem(
-      {required this.postId,
+      {@JsonKey(name: 'post_id') required this.postId,
       @JsonKey(name: 'id') required this.ids,
       required this.name,
       required this.email,
@@ -163,6 +164,7 @@ class _$_CommentItem implements _CommentItem {
       _$$_CommentItemFromJson(json);
 
   @override
+  @JsonKey(name: 'post_id')
   final int postId;
   @override
   @JsonKey(name: 'id')
@@ -211,7 +213,7 @@ class _$_CommentItem implements _CommentItem {
 
 abstract class _CommentItem implements CommentItem {
   const factory _CommentItem(
-      {required final int postId,
+      {@JsonKey(name: 'post_id') required final int postId,
       @JsonKey(name: 'id') required final int ids,
       required final String name,
       required final String email,
@@ -221,6 +223,7 @@ abstract class _CommentItem implements CommentItem {
       _$_CommentItem.fromJson;
 
   @override
+  @JsonKey(name: 'post_id')
   int get postId;
   @override
   @JsonKey(name: 'id')

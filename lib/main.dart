@@ -12,13 +12,12 @@ import 'package:injectable/injectable.dart';
 
 void main() async {
   await Storage.init();
+
   await configureInjection(Environment.dev);
 
   // runZonedGuarded(body, onError)
-  BlocOverrides.runZoned(
-    () => runApp(getIt<MyApp>()),
-    blocObserver: getIt<SimpleBlocObserver>(),
-  );
+  Bloc.observer = getIt<SimpleBlocObserver>();
+  runApp(getIt<MyApp>());
 }
 
 @injectable
@@ -27,7 +26,9 @@ class MyApp extends StatelessWidget {
 
   final AppRouters appRouters;
 
-  const MyApp({required this.appRouters});
+  const MyApp(
+    this.appRouters,
+  );
 
   @override
   Widget build(BuildContext context) {

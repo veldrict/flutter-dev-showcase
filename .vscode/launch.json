@@ -9,6 +9,11 @@
             "name": "flutter_dev_showcase",
             "request": "launch",
             "type": "dart"
+        },
+        {
+            "name": "flutter_dev_showcase (Attach)",
+            "request": "attach",
+            "type": "dart"
         }
     ]
 }
